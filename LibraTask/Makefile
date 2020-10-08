@@ -34,7 +34,7 @@
 
 # Builds the ProtocolHandlerAddon C++ component example of the SDK.
 
-PRJ=../../../../../..
+PRJ=../../../../../../..
 SETTINGS=$(PRJ)/settings
 
 include $(SETTINGS)/settings.mk
