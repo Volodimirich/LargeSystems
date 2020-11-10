@@ -6,6 +6,14 @@
 
 #IncludeRegexTransform: 
 
+/home/voland/Workspace/LargeSystems/Simulated_annealing/Mutation/Mutation.cpp
+../Structures.h
+/home/voland/Workspace/LargeSystems/Simulated_annealing/Structures.h
+Mutation.h
+/home/voland/Workspace/LargeSystems/Simulated_annealing/Mutation/Mutation.h
+random
+-
+
 /home/voland/Workspace/LargeSystems/Simulated_annealing/Mutation/Mutation.h
 ../Structures.h
 /home/voland/Workspace/LargeSystems/Simulated_annealing/Structures.h

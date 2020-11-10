@@ -34,7 +34,7 @@ public:
 
         while (it < 100){
             double new_temp = temp_module->getTemp();
-//            std::cout << new_temp << "-----" << it <<std::endl;
+            std::cout << new_temp << "-----" << it <<std::endl;
 
             for (size_t i = 0; i < 10; i++) {
                 S tst = result->GetSolution(*dynamic_cast<S*>(solution));
@@ -43,13 +43,14 @@ public:
                     solution = tst.GetCopy();
                     if (solution->CriterionGet() <= best->CriterionGet()) {
                         it=0;
+                        delete(best);
                         best = solution;
                     }
                 } else {
                     float x = (rand() % 100) / (100 * 1.0);
 
                     if (exp(-diff / new_temp) > x) {
-//                        delete(solution)
+                        delete(solution);
                         solution = tst.GetCopy();
 
                     }
@@ -58,7 +59,8 @@ public:
             }
             it++;
         }
-//        delete(temp_module);
+        delete(temp_module);
+        delete(solution);
         return dynamic_cast<S*>(best);
 
     }

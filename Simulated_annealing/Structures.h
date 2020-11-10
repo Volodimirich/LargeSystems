@@ -52,6 +52,8 @@ public:
     bool Empty() {
         return load.empty();
     }
+
+    ~SingleLoad(){};
 };
 
 class BaseSolution{
@@ -84,6 +86,9 @@ public:
 
     virtual void PrintResults() = 0;
 
+    ~BaseSolution(){
+
+    }
 
 };
 
