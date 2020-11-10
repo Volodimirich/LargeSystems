@@ -1,0 +1,1 @@
+/usr/bin/c++   -Wall -pthread -g   CMakeFiles/Simulated_annealing.dir/main.cpp.o CMakeFiles/Simulated_annealing.dir/Temperature/Temperature.cpp.o CMakeFiles/Simulated_annealing.dir/Mutation/Mutation.cpp.o  -o Simulated_annealing 

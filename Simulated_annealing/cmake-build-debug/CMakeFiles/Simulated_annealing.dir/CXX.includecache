@@ -1,0 +1,42 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/voland/Workspace/LargeSystems/Simulated_annealing/Mutation/Mutation.h
+../Structures.h
+/home/voland/Workspace/LargeSystems/Simulated_annealing/Structures.h
+random
+-
+
+/home/voland/Workspace/LargeSystems/Simulated_annealing/Structures.h
+iostream
+-
+stdio.h
+-
+vector
+-
+unordered_map
+-
+algorithm
+-
+
+/home/voland/Workspace/LargeSystems/Simulated_annealing/Temperature/Temperature.h
+math.h
+-
+
+/home/voland/Workspace/LargeSystems/Simulated_annealing/main.cpp
+iostream
+-
+time.h
+-
+Temperature/Temperature.h
+/home/voland/Workspace/LargeSystems/Simulated_annealing/Temperature/Temperature.h
+Mutation/Mutation.h
+/home/voland/Workspace/LargeSystems/Simulated_annealing/Mutation/Mutation.h
+Structures.h
+/home/voland/Workspace/LargeSystems/Simulated_annealing/Structures.h
+
