@@ -12,6 +12,20 @@
 random
 -
 
+/home/voland/Workspace/LargeSystems/Simulated_annealing/Simulating/Simulating.h
+iostream
+-
+time.h
+-
+variant
+-
+../Temperature/Temperature.h
+/home/voland/Workspace/LargeSystems/Simulated_annealing/Temperature/Temperature.h
+../Mutation/Mutation.h
+/home/voland/Workspace/LargeSystems/Simulated_annealing/Mutation/Mutation.h
+../Structures.h
+/home/voland/Workspace/LargeSystems/Simulated_annealing/Structures.h
+
 /home/voland/Workspace/LargeSystems/Simulated_annealing/Structures.h
 iostream
 -
@@ -39,4 +53,6 @@ Mutation/Mutation.h
 /home/voland/Workspace/LargeSystems/Simulated_annealing/Mutation/Mutation.h
 Structures.h
 /home/voland/Workspace/LargeSystems/Simulated_annealing/Structures.h
+Simulating/Simulating.h
+/home/voland/Workspace/LargeSystems/Simulated_annealing/Simulating/Simulating.h
 

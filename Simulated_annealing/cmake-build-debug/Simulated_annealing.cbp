@@ -94,6 +94,9 @@
 		<Unit filename="/home/voland/Workspace/LargeSystems/Simulated_annealing/Mutation/Mutation.h">
 			<Option target="Simulated_annealing"/>
 		</Unit>
+		<Unit filename="/home/voland/Workspace/LargeSystems/Simulated_annealing/Simulating/Simulating.h">
+			<Option target="Simulated_annealing"/>
+		</Unit>
 		<Unit filename="/home/voland/Workspace/LargeSystems/Simulated_annealing/Structures.h">
 			<Option target="Simulated_annealing"/>
 		</Unit>

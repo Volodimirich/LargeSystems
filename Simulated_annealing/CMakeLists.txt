@@ -15,6 +15,6 @@ include_directories(Temperature)
 #include_directories(XmlLibrary)
 #include_directories(SaSolver)
 
-add_executable(${PROJECT_NAME} main.cpp Temperature/Temperature.cpp Mutation/Mutation.cpp main.cpp Structures.h Temperature/Temperature.h Mutation/Mutation.h)
+add_executable(${PROJECT_NAME} main.cpp Temperature/Temperature.cpp Mutation/Mutation.cpp main.cpp Structures.h Temperature/Temperature.h Mutation/Mutation.h Simulating/Simulating.h)
 #target_link_libraries(${PROJECT_NAME} SolutionScheduling)
 #target_link_libraries(${PROJECT_NAME} MutationScheduling)

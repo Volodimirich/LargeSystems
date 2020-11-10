@@ -16,7 +16,7 @@ protected:
     double temp;
     int it = 0;
 public:
-    Temperature(double temperature) : temp(temperature) {}
+    Temperature(double temperature=0) : temp(temperature) {}
 
     virtual double getTemp() = 0;
 };
@@ -24,25 +24,25 @@ public:
 class Boltzman: public Temperature
 {
 public:
-    Boltzman(double temp): Temperature(temp) {}
+    Boltzman(double temp=0): Temperature(temp) {}
 
-    double getTemp();
+    virtual double getTemp();
 };
 
 class Cauchy: public Temperature
 {
 public:
-    Cauchy(double temp): Temperature(temp) {}
+    Cauchy(double temp=0): Temperature(temp) {}
 
-    double getTemp();
+    virtual double getTemp();
 };
 
 class Basic: public Temperature
 {
 public:
-    Basic(double temp): Temperature(temp) {}
+    Basic(double temp=0): Temperature(temp) {}
 
-    double getTemp();
+    virtual double getTemp();
 };
 
 #endif //SIMULATED_ANNEALING_TEMPERATURE_H

@@ -11,19 +11,26 @@
 #include <unordered_map>
 #include <algorithm>
 
-using data = std::pair<char, int>;
 
-class SingleLoad{
+class SingleLoad {
 private:
-    std::vector <data> load;
+    std::vector <int> load;
 public:
     SingleLoad() = default;
 
+    SingleLoad(std::vector <int> data) {
+        load.clear();
+        load = data;
+    }
+
+    std::vector <int> GetVec() {
+        return load;
+    }
+
     int GetLen() {
-//        return load.size();
         int current = 0;
         for (auto & it : load)
-            current += it.second;
+            current += it;
         return current;
     }
 
@@ -31,13 +38,13 @@ public:
         load.clear();
     }
 
-    void WorkloadAdd(char let, size_t size) {
-        load.emplace_back(std::make_pair(let, size));
+    void WorkloadAdd(size_t size) {
+        load.emplace_back(size);
     }
 
-    data WorkloadRandomDelete() {
+    int WorkloadRandomDelete() {
         int position = rand() % load.size();
-        data command = load[position];
+        int command = load[position];
         load.erase(load.begin() + position);
         return command;
     }
@@ -47,35 +54,63 @@ public:
     }
 };
 
-class Solution{
-private:
+class BaseSolution{
+protected:
     std::unordered_map <int, SingleLoad> global_loading;
     size_t amount;
 public:
-    Solution(int cores) {
+    BaseSolution(int cores = 0) {
         amount=cores;
         for (size_t i=0; i<amount; i++)
             global_loading[i] = SingleLoad();
     }
 
-    void Insertation(int position, char let, size_t size) {
-        global_loading[position].WorkloadAdd(let, size);
+    BaseSolution(int cores, std::unordered_map<int, SingleLoad> loading) {
+        amount = cores;
+        for (size_t i=0; i<amount; i++)
+            global_loading[i] = SingleLoad(loading[i].GetVec());
+    }
+
+    virtual void Insertation(int position, int size) = 0;
+
+
+    virtual int CriterionGet() = 0;
+
+    virtual int CoresAmount() = 0;
+
+    virtual int RandomPositions(int position) = 0;
+
+    virtual bool EmptyLine(int position) = 0;
+
+    virtual void PrintResults() = 0;
+
+
+};
+
+
+class Solution: public BaseSolution{
+public:
+    Solution(int cores = 0) : BaseSolution(cores) {};
+
+    Solution(int cores, std::unordered_map<int, SingleLoad> loading) : BaseSolution(cores, loading) {};
+
+
+    virtual void Insertation(int position, int size) {
+        global_loading[position].WorkloadAdd(size);
     }
 
     int CriterionGet() {
         std::vector <int> loads_len;
         for (size_t i=0;  i<amount; i++)
             loads_len.emplace_back(global_loading[i].GetLen());
-        int max = *max_element(loads_len.begin(), loads_len.end());
-        int min = *min_element(loads_len.begin(), loads_len.end());
-        return max - min;
+        return *max_element(loads_len.begin(), loads_len.end()) - *min_element(loads_len.begin(), loads_len.end());
     }
 
     int CoresAmount() {
         return amount;
     }
 
-    data RandomPositions(int position) {
+    int RandomPositions(int position) {
         return global_loading[position].WorkloadRandomDelete();
 
     }
@@ -90,6 +125,10 @@ public:
         }
     }
 
+    Solution* GetCopy() {
+        Solution *copy = new Solution(amount, global_loading);
+        return copy;
+    }
 };
 
 #endif //SIMULATED_ANNEALING_STRUCTURES_H
