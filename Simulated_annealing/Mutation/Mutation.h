@@ -18,9 +18,9 @@ public:
         input = input_data;
     }
 
-    virtual Solution *InitSolution(int cores) = 0;
+    virtual Solution* InitSolution(int cores) = 0;
 
-    virtual Solution GetSolution(Solution solution) = 0;
+    virtual BaseSolution* GetSolution(BaseSolution *solution) = 0;
 
     virtual ~BaseMutation() = default;
 };
@@ -33,7 +33,7 @@ class Mutation : public BaseMutation {
 public:
     Mutation(std::vector <int> input_data = {}) : BaseMutation(input_data) {}
 
-    virtual Solution GetSolution(Solution solution);
+    virtual BaseSolution* GetSolution(BaseSolution *solution);
 
     virtual Solution* InitSolution(int cores);
 };

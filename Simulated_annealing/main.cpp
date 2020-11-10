@@ -12,6 +12,6 @@
 
 
 int main() {
-    Simulating<Boltzman, Solution, Mutation> sim({6, 3, 3, 3, 3, 3, 2, 1}, 4, 100);
-    sim.Solution_find();
+    Simulating<Boltzman, Solution, Mutation> sim({6, 3, 3}, 2, 100);
+    sim.Solution_find()->PrintResults();
 }

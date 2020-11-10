@@ -86,9 +86,9 @@ public:
 
     virtual void PrintResults() = 0;
 
-    ~BaseSolution(){
+    virtual  BaseSolution* GetCopy() = 0;
 
-    }
+    virtual ~BaseSolution() = default;
 
 };
 
@@ -104,33 +104,33 @@ public:
         global_loading[position].WorkloadAdd(size);
     }
 
-    int CriterionGet() {
+    virtual int CriterionGet() {
         std::vector <int> loads_len;
         for (size_t i=0;  i<amount; i++)
             loads_len.emplace_back(global_loading[i].GetLen());
         return *max_element(loads_len.begin(), loads_len.end()) - *min_element(loads_len.begin(), loads_len.end());
     }
 
-    int CoresAmount() {
+    virtual int CoresAmount() {
         return amount;
     }
 
-    int RandomPositions(int position) {
+    virtual int RandomPositions(int position) {
         return global_loading[position].WorkloadRandomDelete();
 
     }
 
-    bool EmptyLine(int position) {
+    virtual bool EmptyLine(int position) {
         return global_loading[position].Empty();
     }
 
-    void PrintResults() {
+    virtual void PrintResults() {
         for (size_t i=0; i<amount; i++) {
             std::cout << i << "___" << global_loading[i].GetLen() << std::endl;
         }
     }
 
-    Solution* GetCopy() {
+    virtual BaseSolution* GetCopy() {
         Solution *copy = new Solution(amount, global_loading);
         return copy;
     }

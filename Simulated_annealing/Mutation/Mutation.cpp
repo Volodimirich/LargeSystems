@@ -16,14 +16,15 @@ Solution* Mutation::InitSolution(int cores) {
     return new_solution;
 }
 
-Solution Mutation::GetSolution(Solution solution) {
+BaseSolution* Mutation::GetSolution(BaseSolution *solution) {
+    BaseSolution* new_sol = solution->GetCopy();
     int pos;
     do {
-        pos = rand() % solution.CoresAmount();
-    } while (solution.EmptyLine(pos));
-    int command = solution.RandomPositions(pos);
-    int new_pos = rand() % solution.CoresAmount();
-    solution.Insertation(new_pos, command);
+        pos = rand() % new_sol->CoresAmount();
+    } while (new_sol->EmptyLine(pos));
+    int command = new_sol->RandomPositions(pos);
+    int new_pos = rand() % new_sol->CoresAmount();
+    new_sol->Insertation(new_pos, command);
 
-    return solution;
+    return new_sol;
 }

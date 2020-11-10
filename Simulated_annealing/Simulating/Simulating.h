@@ -25,9 +25,15 @@ public:
     Simulating(std::vector <int> data, int cores, int start_temp) {
         result = new M(data); //NeedFix
         solution = result->InitSolution(cores);
-        best = solution;
+        best = solution->GetCopy();
         temp_module = new T(start_temp); //NeedFix
 
+    }
+    ~Simulating() {
+        delete(result);
+        delete(solution);
+        delete(temp_module);
+        delete(best);
     }
 
     S* Solution_find() {
@@ -37,30 +43,31 @@ public:
             std::cout << new_temp << "-----" << it <<std::endl;
 
             for (size_t i = 0; i < 10; i++) {
-                S tst = result->GetSolution(*dynamic_cast<S*>(solution));
-                size_t diff = solution->CriterionGet() - tst.CriterionGet();
-                if (diff) {
-                    solution = tst.GetCopy();
-                    if (solution->CriterionGet() <= best->CriterionGet()) {
+                BaseSolution* tst = result->GetSolution(solution);
+                double diff = tst->CriterionGet() - solution->CriterionGet();
+
+                if (diff < 0) {
+                    delete(solution);
+                    solution = tst->GetCopy();
+                    if (solution->CriterionGet() < best->CriterionGet()) {
                         it=0;
                         delete(best);
-                        best = solution;
+                        best = solution->GetCopy();
                     }
                 } else {
                     float x = (rand() % 100) / (100 * 1.0);
 
                     if (exp(-diff / new_temp) > x) {
                         delete(solution);
-                        solution = tst.GetCopy();
+                        solution = tst->GetCopy();
 
                     }
 
                 }
+                delete(tst);
             }
             it++;
         }
-        delete(temp_module);
-        delete(solution);
         return dynamic_cast<S*>(best);
 
     }

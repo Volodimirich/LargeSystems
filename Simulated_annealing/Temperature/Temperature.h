@@ -19,6 +19,8 @@ public:
     Temperature(double temperature=0) : temp(temperature) {}
 
     virtual double getTemp() = 0;
+
+    virtual ~Temperature() = default;
 };
 
 class Boltzman: public Temperature
