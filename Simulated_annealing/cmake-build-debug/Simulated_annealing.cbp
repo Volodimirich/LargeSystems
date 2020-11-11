@@ -88,6 +88,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/voland/Workspace/LargeSystems/Simulated_annealing/Generator/Generator_csv.cpp">
+			<Option target="Simulated_annealing"/>
+		</Unit>
+		<Unit filename="/home/voland/Workspace/LargeSystems/Simulated_annealing/Generator/Generator_csv.h">
+			<Option target="Simulated_annealing"/>
+		</Unit>
 		<Unit filename="/home/voland/Workspace/LargeSystems/Simulated_annealing/Mutation/Mutation.cpp">
 			<Option target="Simulated_annealing"/>
 		</Unit>
@@ -95,6 +101,9 @@
 			<Option target="Simulated_annealing"/>
 		</Unit>
 		<Unit filename="/home/voland/Workspace/LargeSystems/Simulated_annealing/Simulating/Simulating.h">
+			<Option target="Simulated_annealing"/>
+		</Unit>
+		<Unit filename="/home/voland/Workspace/LargeSystems/Simulated_annealing/Simulating/Simulating_parralel.h">
 			<Option target="Simulated_annealing"/>
 		</Unit>
 		<Unit filename="/home/voland/Workspace/LargeSystems/Simulated_annealing/Structures.h">

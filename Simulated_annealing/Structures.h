@@ -12,6 +12,12 @@
 #include <algorithm>
 
 
+struct InputDate{
+    int proc_num = 0;
+    int work_amount = 0;
+    std::vector <int> data = {};
+};
+
 class SingleLoad {
 private:
     std::vector <int> load;
@@ -125,8 +131,9 @@ public:
     }
 
     virtual void PrintResults() {
+        std::cout << "Answer:" << std::endl;
         for (size_t i=0; i<amount; i++) {
-            std::cout << i << "___" << global_loading[i].GetLen() << std::endl;
+            std::cout << "Proc №"<< i << " --- " << global_loading[i].GetLen() << std::endl;
         }
     }
 

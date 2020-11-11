@@ -8,10 +8,9 @@
 Solution* Mutation::InitSolution(int cores) {
     Solution *new_solution = new Solution(cores);
 
-    for (auto &it: input) {
-        int pos = rand() % cores;
-        new_solution->Insertation(pos, it);
-    }
+    for (auto &it: input)
+        new_solution->Insertation(0, it);
+
 
     return new_solution;
 }
@@ -19,11 +18,15 @@ Solution* Mutation::InitSolution(int cores) {
 BaseSolution* Mutation::GetSolution(BaseSolution *solution) {
     BaseSolution* new_sol = solution->GetCopy();
     int pos;
+    int new_pos;
     do {
         pos = rand() % new_sol->CoresAmount();
     } while (new_sol->EmptyLine(pos));
     int command = new_sol->RandomPositions(pos);
-    int new_pos = rand() % new_sol->CoresAmount();
+    do {
+        new_pos = rand() % new_sol->CoresAmount();
+    } while (pos == new_pos);
+
     new_sol->Insertation(new_pos, command);
 
     return new_sol;

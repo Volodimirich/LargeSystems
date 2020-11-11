@@ -60,13 +60,14 @@ public:
                     if (exp(-diff / new_temp) > x) {
                         delete(solution);
                         solution = tst->GetCopy();
-
                     }
 
                 }
                 delete(tst);
             }
             it++;
+            delete(solution);
+            solution = best->GetCopy();
         }
         return dynamic_cast<S*>(best);
 

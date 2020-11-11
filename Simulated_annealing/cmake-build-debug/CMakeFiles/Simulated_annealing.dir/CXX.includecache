@@ -6,6 +6,12 @@
 
 #IncludeRegexTransform: 
 
+/home/voland/Workspace/LargeSystems/Simulated_annealing/Generator/Generator_csv.h
+iostream
+-
+../Structures.h
+/home/voland/Workspace/LargeSystems/Simulated_annealing/Structures.h
+
 /home/voland/Workspace/LargeSystems/Simulated_annealing/Mutation/Mutation.h
 ../Structures.h
 /home/voland/Workspace/LargeSystems/Simulated_annealing/Structures.h
@@ -26,6 +32,14 @@ variant
 ../Structures.h
 /home/voland/Workspace/LargeSystems/Simulated_annealing/Structures.h
 
+/home/voland/Workspace/LargeSystems/Simulated_annealing/Simulating/Simulating_parralel.h
+Simulating.h
+/home/voland/Workspace/LargeSystems/Simulated_annealing/Simulating/Simulating.h
+thread
+-
+mutex
+-
+
 /home/voland/Workspace/LargeSystems/Simulated_annealing/Structures.h
 iostream
 -
@@ -43,10 +57,6 @@ math.h
 -
 
 /home/voland/Workspace/LargeSystems/Simulated_annealing/main.cpp
-iostream
--
-time.h
--
 Temperature/Temperature.h
 /home/voland/Workspace/LargeSystems/Simulated_annealing/Temperature/Temperature.h
 Mutation/Mutation.h
@@ -55,4 +65,8 @@ Structures.h
 /home/voland/Workspace/LargeSystems/Simulated_annealing/Structures.h
 Simulating/Simulating.h
 /home/voland/Workspace/LargeSystems/Simulated_annealing/Simulating/Simulating.h
+Simulating/Simulating_parralel.h
+/home/voland/Workspace/LargeSystems/Simulated_annealing/Simulating/Simulating_parralel.h
+Generator/Generator_csv.h
+/home/voland/Workspace/LargeSystems/Simulated_annealing/Generator/Generator_csv.h
 
