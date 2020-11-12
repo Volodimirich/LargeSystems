@@ -43,7 +43,7 @@ public:
             for (auto &th: thread_vec)
                 if (th.joinable())
                     th.join();
-
+            std::cout<<it << std::endl;
             if (best) {
                 BaseSolution* new_solution = this->GetBestSolution();
                 if (new_solution->CriterionGet() < best->CriterionGet()) {
@@ -52,6 +52,7 @@ public:
                     delete (new_solution);
                     it = 0;
                 } else {
+                    delete(new_solution);
                     it++;
                 }
             } else {
