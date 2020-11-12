@@ -1,0 +1,366 @@
+1___20
+Solo launch
+Answer:
+Proc №0 --- 10442
+Proc №1 --- 10443
+Proc №2 --- 10441
+Proc №3 --- 10441
+Proc №4 --- 10440
+Proc №5 --- 10440
+Proc №6 --- 10442
+Proc №7 --- 10440
+Proc №8 --- 10442
+Proc №9 --- 10443
+Proc №10 --- 10442
+Deviation - 3
+Program worktime - 3.38172s
+Parallel launch 1
+Answer:
+Proc №0 --- 10443
+Proc №1 --- 10442
+Proc №2 --- 10443
+Proc №3 --- 10440
+Proc №4 --- 10441
+Proc №5 --- 10442
+Proc №6 --- 10442
+Proc №7 --- 10440
+Proc №8 --- 10441
+Proc №9 --- 10441
+Proc №10 --- 10441
+Deviation - 3
+Program worktime - 116.575s
+Parallel launch2
+Answer:
+Proc №0 --- 10441
+Proc №1 --- 10442
+Proc №2 --- 10440
+Proc №3 --- 10443
+Proc №4 --- 10441
+Proc №5 --- 10440
+Proc №6 --- 10443
+Proc №7 --- 10442
+Proc №8 --- 10441
+Proc №9 --- 10440
+Proc №10 --- 10443
+Deviation - 3
+Program worktime - 65.8038s
+Parallel launch3
+Answer:
+Proc №0 --- 10443
+Proc №1 --- 10443
+Proc №2 --- 10439
+Proc №3 --- 10443
+Proc №4 --- 10443
+Proc №5 --- 10439
+Proc №6 --- 10440
+Proc №7 --- 10440
+Proc №8 --- 10443
+Proc №9 --- 10440
+Proc №10 --- 10443
+Deviation - 4
+Program worktime - 54.644s
+1___20
+Solo launch
+Answer:
+Proc №0 --- 10546
+Proc №1 --- 10546
+Proc №2 --- 10546
+Proc №3 --- 10545
+Proc №4 --- 10545
+Proc №5 --- 10544
+Proc №6 --- 10546
+Proc №7 --- 10546
+Proc №8 --- 10545
+Proc №9 --- 10544
+Proc №10 --- 10545
+Deviation - 2
+Program worktime - 3.40696s
+Parallel launch 1
+Answer:
+Proc №0 --- 10545
+Proc №1 --- 10547
+Proc №2 --- 10545
+Proc №3 --- 10547
+Proc №4 --- 10547
+Proc №5 --- 10545
+Proc №6 --- 10546
+Proc №7 --- 10545
+Proc №8 --- 10543
+Proc №9 --- 10543
+Proc №10 --- 10545
+Deviation - 4
+Program worktime - 65.7202s
+Parallel launch2
+Answer:
+Proc №0 --- 10547
+Proc №1 --- 10545
+Proc №2 --- 10545
+Proc №3 --- 10544
+Proc №4 --- 10545
+Proc №5 --- 10547
+Proc №6 --- 10545
+Proc №7 --- 10546
+Proc №8 --- 10545
+Proc №9 --- 10544
+Proc №10 --- 10545
+Deviation - 3
+Program worktime - 92.9514s
+Parallel launch3
+Answer:
+Proc №0 --- 10544
+Proc №1 --- 10545
+Proc №2 --- 10545
+Proc №3 --- 10544
+Proc №4 --- 10547
+Proc №5 --- 10544
+Proc №6 --- 10545
+Proc №7 --- 10545
+Proc №8 --- 10547
+Proc №9 --- 10546
+Proc №10 --- 10546
+Deviation - 3
+Program worktime - 98.9839s
+1___20
+Solo launch
+Answer:
+Proc №0 --- 10487
+Proc №1 --- 10488
+Proc №2 --- 10487
+Proc №3 --- 10488
+Proc №4 --- 10490
+Proc №5 --- 10489
+Proc №6 --- 10489
+Proc №7 --- 10487
+Proc №8 --- 10487
+Proc №9 --- 10490
+Proc №10 --- 10488
+Deviation - 3
+Program worktime - 3.40118s
+Parallel launch 1
+Answer:
+Proc №0 --- 10490
+Proc №1 --- 10488
+Proc №2 --- 10490
+Proc №3 --- 10487
+Proc №4 --- 10487
+Proc №5 --- 10490
+Proc №6 --- 10488
+Proc №7 --- 10487
+Proc №8 --- 10488
+Proc №9 --- 10487
+Proc №10 --- 10488
+Deviation - 3
+Program worktime - 113.891s
+Parallel launch2
+Answer:
+Proc №0 --- 10489
+Proc №1 --- 10488
+Proc №2 --- 10487
+Proc №3 --- 10490
+Proc №4 --- 10489
+Proc №5 --- 10490
+Proc №6 --- 10488
+Proc №7 --- 10486
+Proc №8 --- 10486
+Proc №9 --- 10489
+Proc №10 --- 10488
+Deviation - 4
+Program worktime - 54.5053s
+Parallel launch3
+Answer:
+Proc №0 --- 10489
+Proc №1 --- 10487
+Proc №2 --- 10489
+Proc №3 --- 10486
+Proc №4 --- 10490
+Proc №5 --- 10488
+Proc №6 --- 10489
+Proc №7 --- 10487
+Proc №8 --- 10489
+Proc №9 --- 10490
+Proc №10 --- 10486
+Deviation - 4
+Program worktime - 92.6327s
+1___20
+Solo launch
+Answer:
+Proc №0 --- 10548
+Proc №1 --- 10545
+Proc №2 --- 10546
+Proc №3 --- 10543
+Proc №4 --- 10547
+Proc №5 --- 10544
+Proc №6 --- 10548
+Proc №7 --- 10549
+Proc №8 --- 10549
+Proc №9 --- 10547
+Proc №10 --- 10543
+Deviation - 6
+Program worktime - 3.5001s
+Parallel launch 1
+Answer:
+Proc №0 --- 10545
+Proc №1 --- 10545
+Proc №2 --- 10548
+Proc №3 --- 10545
+Proc №4 --- 10548
+Proc №5 --- 10548
+Proc №6 --- 10547
+Proc №7 --- 10546
+Proc №8 --- 10547
+Proc №9 --- 10545
+Proc №10 --- 10545
+Deviation - 3
+Program worktime - 97.0328s
+Parallel launch2
+Answer:
+Proc №0 --- 10548
+Proc №1 --- 10545
+Proc №2 --- 10545
+Proc №3 --- 10548
+Proc №4 --- 10547
+Proc №5 --- 10546
+Proc №6 --- 10546
+Proc №7 --- 10546
+Proc №8 --- 10548
+Proc №9 --- 10545
+Proc №10 --- 10545
+Deviation - 3
+Program worktime - 87.8933s
+Parallel launch3
+Answer:
+Proc №0 --- 10546
+Proc №1 --- 10548
+Proc №2 --- 10545
+Proc №3 --- 10548
+Proc №4 --- 10547
+Proc №5 --- 10546
+Proc №6 --- 10545
+Proc №7 --- 10546
+Proc №8 --- 10545
+Proc №9 --- 10548
+Proc №10 --- 10545
+Deviation - 3
+Program worktime - 70.7288s
+1___20
+Solo launch
+Answer:
+Proc №0 --- 10559
+Proc №1 --- 10550
+Proc №2 --- 10550
+Proc №3 --- 10559
+Proc №4 --- 10551
+Proc №5 --- 10550
+Proc №6 --- 10556
+Proc №7 --- 10559
+Proc №8 --- 10558
+Proc №9 --- 10555
+Proc №10 --- 10555
+Deviation - 9
+Program worktime - 3.3516s
+Parallel launch 1
+Answer:
+Proc №0 --- 10557
+Proc №1 --- 10557
+Proc №2 --- 10554
+Proc №3 --- 10555
+Proc №4 --- 10555
+Proc №5 --- 10553
+Proc №6 --- 10557
+Proc №7 --- 10554
+Proc №8 --- 10554
+Proc №9 --- 10553
+Proc №10 --- 10553
+Deviation - 4
+Program worktime - 64.9494s
+Parallel launch2
+Answer:
+Proc №0 --- 10556
+Proc №1 --- 10554
+Proc №2 --- 10553
+Proc №3 --- 10556
+Proc №4 --- 10553
+Proc №5 --- 10555
+Proc №6 --- 10556
+Proc №7 --- 10555
+Proc №8 --- 10553
+Proc №9 --- 10556
+Proc №10 --- 10555
+Deviation - 3
+Program worktime - 87.0312s
+Parallel launch3
+Answer:
+Proc №0 --- 10555
+Proc №1 --- 10556
+Proc №2 --- 10554
+Proc №3 --- 10556
+Proc №4 --- 10556
+Proc №5 --- 10553
+Proc №6 --- 10555
+Proc №7 --- 10553
+Proc №8 --- 10554
+Proc №9 --- 10555
+Proc №10 --- 10555
+Deviation - 3
+Program worktime - 77.0622s
+1___20
+Solo launch
+Answer:
+Proc №0 --- 10475
+Proc №1 --- 10473
+Proc №2 --- 10475
+Proc №3 --- 10475
+Proc №4 --- 10475
+Proc №5 --- 10474
+Proc №6 --- 10473
+Proc №7 --- 10475
+Proc №8 --- 10473
+Proc №9 --- 10474
+Proc №10 --- 10474
+Deviation - 2
+Program worktime - 3.36504s
+Parallel launch 1
+Answer:
+Proc №0 --- 10476
+Proc №1 --- 10473
+Proc №2 --- 10473
+Proc №3 --- 10474
+Proc №4 --- 10476
+Proc №5 --- 10473
+Proc №6 --- 10474
+Proc №7 --- 10474
+Proc №8 --- 10473
+Proc №9 --- 10474
+Proc №10 --- 10476
+Deviation - 3
+Program worktime - 84.9949s
+Parallel launch2
+Answer:
+Proc №0 --- 10475
+Proc №1 --- 10472
+Proc №2 --- 10475
+Proc №3 --- 10473
+Proc №4 --- 10475
+Proc №5 --- 10475
+Proc №6 --- 10472
+Proc №7 --- 10472
+Proc №8 --- 10476
+Proc №9 --- 10476
+Proc №10 --- 10475
+Deviation - 4
+Program worktime - 54.2486s
+Parallel launch3
+Answer:
+Proc №0 --- 10474
+Proc №1 --- 10474
+Proc №2 --- 10473
+Proc №3 --- 10474
+Proc №4 --- 10473
+Proc №5 --- 10476
+Proc №6 --- 10473
+Proc №7 --- 10476
+Proc №8 --- 10475
+Proc №9 --- 10474
+Proc №10 --- 10474
+Deviation - 3
+Program worktime - 69.314s
