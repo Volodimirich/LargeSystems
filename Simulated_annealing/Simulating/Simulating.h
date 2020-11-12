@@ -36,11 +36,11 @@ public:
         delete(best);
     }
 
-    S* Solution_find() {
+    BaseSolution* Solution_find() {
 
         while (it < 100){
             double new_temp = temp_module->getTemp();
-            std::cout << new_temp << "-----" << it <<std::endl;
+//            std::cout << new_temp << "-----" << it <<std::endl;
 
             for (size_t i = 0; i < 10; i++) {
                 BaseSolution* tst = result->GetSolution(solution);
@@ -69,7 +69,7 @@ public:
             delete(solution);
             solution = best->GetCopy();
         }
-        return dynamic_cast<S*>(best);
+        return best;
 
     }
 

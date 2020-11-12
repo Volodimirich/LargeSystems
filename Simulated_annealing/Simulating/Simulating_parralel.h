@@ -8,6 +8,7 @@
 #include <thread>
 #include <mutex>
 
+
 template <class T, class S, class M>
 class ParallelSimulating{
 private:
@@ -15,7 +16,7 @@ private:
     int temp;
     int cores_amount;
     std::vector <int> inform;
-    std::vector <S> worktask = {};
+    std::vector <BaseSolution*> worktask;
     std::mutex writelock;
 
 public:
@@ -25,19 +26,18 @@ public:
     void InitWorkTask(){
         Simulating<T,S,M> sim(inform, cores_amount, temp);
         writelock.lock();
-
-        worktask.emplace_back(sim.Solution_find());
-
+        worktask.emplace_back(sim.Solution_find()->GetCopy());
         writelock.unlock();
     };
 
-    S* ParralelSolution() {
+    BaseSolution* ParralelSolution() {
         std::vector<std::thread> thread_vec(num_procs);
-        for (size_t i; i<num_procs; i++)
-            thread_vec.emplace_back(std::thread(InitWorkTask));
+        for (size_t i=0; i<num_procs; i++)
+            thread_vec[i] = std::thread(&ParallelSimulating::InitWorkTask, this);
 
-        for (auto &it: thread_vec)
-            it.join();
+        for (auto &th: thread_vec)
+            if (th.joinable())
+                th.join();
 
         return GetBestSolution();
 
@@ -45,15 +45,15 @@ public:
 
 
 
-    S* GetBestSolution() {
+    BaseSolution* GetBestSolution() {
         std::vector <int> allcrit;
         BaseSolution* tst;
         for (auto &it: worktask)
-            allcrit.emplace_back(it.CriterionGet());
+            allcrit.emplace_back(it->CriterionGet());
 
         int max = *std::max_element(allcrit.begin(), allcrit.end());
-        for (auto &it: worktask) {
-            if (it.CriterionGet() == max)
+        for (auto it: worktask) {
+            if (it->CriterionGet() == max)
                 tst = it->GetCopy();
             delete(it);
         }

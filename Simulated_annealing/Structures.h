@@ -135,6 +135,8 @@ public:
         for (size_t i=0; i<amount; i++) {
             std::cout << "Proc №"<< i << " --- " << global_loading[i].GetLen() << std::endl;
         }
+
+        std::cout << "Deviation - " << this->CriterionGet() << std::endl;
     }
 
     virtual BaseSolution* GetCopy() {
