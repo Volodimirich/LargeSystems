@@ -1,0 +1,420 @@
+Answer:
+Proc №0 --- 1859
+Proc №1 --- 1861
+Proc №2 --- 1858
+Proc №3 --- 1860
+Proc №4 --- 1862
+Proc №5 --- 1861
+Proc №6 --- 1863
+Proc №7 --- 1862
+Proc №8 --- 1858
+Proc №9 --- 1863
+Proc №10 --- 1863
+Deviation - 5
+Program worktime - 5.77983
+Answer:
+Proc №0 --- 1937
+Proc №1 --- 1936
+Proc №2 --- 1936
+Proc №3 --- 1941
+Proc №4 --- 1941
+Proc №5 --- 1940
+Proc №6 --- 1940
+Proc №7 --- 1941
+Proc №8 --- 1941
+Proc №9 --- 1937
+Proc №10 --- 1943
+Deviation - 7
+Program worktime - 4.57731
+Answer:
+Proc №0 --- 1859
+Proc №1 --- 1857
+Proc №2 --- 1859
+Proc №3 --- 1858
+Proc №4 --- 1857
+Proc №5 --- 1858
+Proc №6 --- 1856
+Proc №7 --- 1858
+Proc №8 --- 1855
+Proc №9 --- 1855
+Proc №10 --- 1856
+Deviation - 4
+Program worktime - 5.79981
+Answer:
+Proc №0 --- 1950
+Proc №1 --- 1950
+Proc №2 --- 1952
+Proc №3 --- 1950
+Proc №4 --- 1955
+Proc №5 --- 1954
+Proc №6 --- 1952
+Proc №7 --- 1950
+Proc №8 --- 1955
+Proc №9 --- 1955
+Proc №10 --- 1952
+Deviation - 5
+Program worktime - 5.17055
+Answer:
+Proc №0 --- 2064
+Proc №1 --- 2067
+Proc №2 --- 2062
+Proc №3 --- 2062
+Proc №4 --- 2067
+Proc №5 --- 2063
+Proc №6 --- 2063
+Proc №7 --- 2066
+Proc №8 --- 2067
+Proc №9 --- 2065
+Proc №10 --- 2065
+Deviation - 5
+Program worktime - 9.46119
+Answer:
+Proc №0 --- 2073
+Proc №1 --- 2074
+Proc №2 --- 2072
+Proc №3 --- 2071
+Proc №4 --- 2074
+Proc №5 --- 2074
+Proc №6 --- 2074
+Proc №7 --- 2074
+Proc №8 --- 2074
+Proc №9 --- 2073
+Proc №10 --- 2072
+Deviation - 3
+Program worktime - 6.65254
+Answer:
+Proc №0 --- 2074
+Proc №1 --- 2076
+Proc №2 --- 2079
+Proc №3 --- 2073
+Proc №4 --- 2078
+Proc №5 --- 2074
+Proc №6 --- 2074
+Proc №7 --- 2074
+Proc №8 --- 2073
+Proc №9 --- 2078
+Proc №10 --- 2076
+Deviation - 6
+Program worktime - 8.12685
+Answer:
+Proc №0 --- 2073
+Proc №1 --- 2073
+Proc №2 --- 2078
+Proc №3 --- 2074
+Proc №4 --- 2077
+Proc №5 --- 2073
+Proc №6 --- 2077
+Proc №7 --- 2073
+Proc №8 --- 2074
+Proc №9 --- 2073
+Proc №10 --- 2075
+Deviation - 5
+Program worktime - 10.2288
+Answer:
+Proc №0 --- 1878
+Proc №1 --- 1881
+Proc №2 --- 1877
+Proc №3 --- 1880
+Proc №4 --- 1877
+Proc №5 --- 1877
+Proc №6 --- 1877
+Proc №7 --- 1880
+Proc №8 --- 1878
+Proc №9 --- 1879
+Proc №10 --- 1879
+Deviation - 4
+Program worktime - 10.4763
+Answer:
+Proc №0 --- 2037
+Proc №1 --- 2037
+Proc №2 --- 2037
+Proc №3 --- 2039
+Proc №4 --- 2039
+Proc №5 --- 2039
+Proc №6 --- 2037
+Proc №7 --- 2037
+Proc №8 --- 2039
+Proc №9 --- 2039
+Proc №10 --- 2038
+Deviation - 2
+Program worktime - 10.0472
+Answer:
+Proc №0 --- 1871
+Proc №1 --- 1871
+Proc №2 --- 1874
+Proc №3 --- 1874
+Proc №4 --- 1874
+Proc №5 --- 1876
+Proc №6 --- 1876
+Proc №7 --- 1876
+Proc №8 --- 1875
+Proc №9 --- 1873
+Proc №10 --- 1871
+Deviation - 5
+Program worktime - 6.58837
+Answer:
+Proc №0 --- 2004
+Proc №1 --- 1996
+Proc №2 --- 1998
+Proc №3 --- 2003
+Proc №4 --- 2003
+Proc №5 --- 2001
+Proc №6 --- 2004
+Proc №7 --- 2001
+Proc №8 --- 1996
+Proc №9 --- 2003
+Proc №10 --- 2000
+Deviation - 8
+Program worktime - 6.70527
+Answer:
+Proc №0 --- 1985
+Proc №1 --- 1987
+Proc №2 --- 1986
+Proc №3 --- 1985
+Proc №4 --- 1986
+Proc №5 --- 1987
+Proc №6 --- 1986
+Proc №7 --- 1986
+Proc №8 --- 1988
+Proc №9 --- 1988
+Proc №10 --- 1986
+Deviation - 3
+Program worktime - 7.77558
+Answer:
+Proc №0 --- 1991
+Proc №1 --- 1991
+Proc №2 --- 1994
+Proc №3 --- 1994
+Proc №4 --- 1991
+Proc №5 --- 1994
+Proc №6 --- 1991
+Proc №7 --- 1994
+Proc №8 --- 1991
+Proc №9 --- 1993
+Proc №10 --- 1993
+Deviation - 3
+Program worktime - 5.4534
+Answer:
+Proc №0 --- 1989
+Proc №1 --- 1991
+Proc №2 --- 1991
+Proc №3 --- 1993
+Proc №4 --- 1992
+Proc №5 --- 1992
+Proc №6 --- 1993
+Proc №7 --- 1990
+Proc №8 --- 1990
+Proc №9 --- 1992
+Proc №10 --- 1989
+Deviation - 4
+Program worktime - 4.27761
+Answer:
+Proc №0 --- 1919
+Proc №1 --- 1916
+Proc №2 --- 1920
+Proc №3 --- 1920
+Proc №4 --- 1916
+Proc №5 --- 1920
+Proc №6 --- 1918
+Proc №7 --- 1920
+Proc №8 --- 1917
+Proc №9 --- 1918
+Proc №10 --- 1917
+Deviation - 4
+Program worktime - 15.4862
+Answer:
+Proc №0 --- 1981
+Proc №1 --- 1979
+Proc №2 --- 1981
+Proc №3 --- 1982
+Proc №4 --- 1983
+Proc №5 --- 1982
+Proc №6 --- 1979
+Proc №7 --- 1982
+Proc №8 --- 1983
+Proc №9 --- 1981
+Proc №10 --- 1979
+Deviation - 4
+Program worktime - 6.73695
+Answer:
+Proc №0 --- 2079
+Proc №1 --- 2081
+Proc №2 --- 2084
+Proc №3 --- 2085
+Proc №4 --- 2084
+Proc №5 --- 2080
+Proc №6 --- 2085
+Proc №7 --- 2079
+Proc №8 --- 2083
+Proc №9 --- 2081
+Proc №10 --- 2084
+Deviation - 6
+Program worktime - 4.37853
+Answer:
+Proc №0 --- 2013
+Proc №1 --- 2015
+Proc №2 --- 2012
+Proc №3 --- 2014
+Proc №4 --- 2014
+Proc №5 --- 2017
+Proc №6 --- 2017
+Proc №7 --- 2015
+Proc №8 --- 2016
+Proc №9 --- 2014
+Proc №10 --- 2012
+Deviation - 5
+Program worktime - 4.07924
+Answer:
+Proc №0 --- 1985
+Proc №1 --- 1984
+Proc №2 --- 1986
+Proc №3 --- 1991
+Proc №4 --- 1987
+Proc №5 --- 1991
+Proc №6 --- 1989
+Proc №7 --- 1984
+Proc №8 --- 1988
+Proc №9 --- 1991
+Proc №10 --- 1984
+Deviation - 7
+Program worktime - 5.50317
+Answer:
+Proc №0 --- 1965
+Proc №1 --- 1966
+Proc №2 --- 1967
+Proc №3 --- 1967
+Proc №4 --- 1964
+Proc №5 --- 1967
+Proc №6 --- 1966
+Proc №7 --- 1967
+Proc №8 --- 1964
+Proc №9 --- 1966
+Proc №10 --- 1967
+Deviation - 3
+Program worktime - 10.0761
+Answer:
+Proc №0 --- 2060
+Proc №1 --- 2064
+Proc №2 --- 2059
+Proc №3 --- 2059
+Proc №4 --- 2058
+Proc №5 --- 2062
+Proc №6 --- 2063
+Proc №7 --- 2064
+Proc №8 --- 2063
+Proc №9 --- 2059
+Proc №10 --- 2058
+Deviation - 6
+Program worktime - 6.59478
+Answer:
+Proc №0 --- 2031
+Proc №1 --- 2028
+Proc №2 --- 2032
+Proc №3 --- 2028
+Proc №4 --- 2029
+Proc №5 --- 2032
+Proc №6 --- 2033
+Proc №7 --- 2029
+Proc №8 --- 2028
+Proc №9 --- 2029
+Proc №10 --- 2029
+Deviation - 5
+Program worktime - 4.02094
+Answer:
+Proc №0 --- 1990
+Proc №1 --- 1991
+Proc №2 --- 1991
+Proc №3 --- 1991
+Proc №4 --- 1990
+Proc №5 --- 1992
+Proc №6 --- 1992
+Proc №7 --- 1994
+Proc №8 --- 1994
+Proc №9 --- 1991
+Proc №10 --- 1990
+Deviation - 4
+Program worktime - 7.16747
+Answer:
+Proc №0 --- 1937
+Proc №1 --- 1938
+Proc №2 --- 1939
+Proc №3 --- 1936
+Proc №4 --- 1939
+Proc №5 --- 1939
+Proc №6 --- 1937
+Proc №7 --- 1938
+Proc №8 --- 1936
+Proc №9 --- 1936
+Proc №10 --- 1938
+Deviation - 3
+Program worktime - 9.02291
+Answer:
+Proc №0 --- 1980
+Proc №1 --- 1985
+Proc №2 --- 1980
+Proc №3 --- 1979
+Proc №4 --- 1985
+Proc №5 --- 1979
+Proc №6 --- 1980
+Proc №7 --- 1983
+Proc №8 --- 1983
+Proc №9 --- 1981
+Proc №10 --- 1980
+Deviation - 6
+Program worktime - 7.30014
+Answer:
+Proc №0 --- 2017
+Proc №1 --- 2019
+Proc №2 --- 2018
+Proc №3 --- 2018
+Proc №4 --- 2016
+Proc №5 --- 2015
+Proc №6 --- 2017
+Proc №7 --- 2016
+Proc №8 --- 2019
+Proc №9 --- 2015
+Proc №10 --- 2019
+Deviation - 4
+Program worktime - 5.13908
+Answer:
+Proc №0 --- 1934
+Proc №1 --- 1934
+Proc №2 --- 1938
+Proc №3 --- 1934
+Proc №4 --- 1935
+Proc №5 --- 1936
+Proc №6 --- 1937
+Proc №7 --- 1938
+Proc №8 --- 1936
+Proc №9 --- 1937
+Proc №10 --- 1935
+Deviation - 4
+Program worktime - 5.18093
+Answer:
+Proc №0 --- 1988
+Proc №1 --- 1983
+Proc №2 --- 1983
+Proc №3 --- 1988
+Proc №4 --- 1983
+Proc №5 --- 1987
+Proc №6 --- 1982
+Proc №7 --- 1988
+Proc №8 --- 1988
+Proc №9 --- 1983
+Proc №10 --- 1985
+Deviation - 6
+Program worktime - 4.01623
+Answer:
+Proc №0 --- 1994
+Proc №1 --- 1992
+Proc №2 --- 1994
+Proc №3 --- 1991
+Proc №4 --- 1991
+Proc №5 --- 1994
+Proc №6 --- 1994
+Proc №7 --- 1991
+Proc №8 --- 1993
+Proc №9 --- 1993
+Proc №10 --- 1991
+Deviation - 3
+Program worktime - 12.2114

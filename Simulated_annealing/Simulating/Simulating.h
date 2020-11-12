@@ -38,7 +38,7 @@ public:
 
     BaseSolution* Solution_find() {
 
-        while (it < 100){
+        while (it < 100) {
             double new_temp = temp_module->getTemp();
 //            std::cout << new_temp << "-----" << it <<std::endl;
 

@@ -10,14 +10,14 @@
 #include "Generator/Generator_csv.h"
 
 
-int main() {
+int main(int argc, char *argv[]) {
     bool parallel = 0;
     size_t mode = 0;
     int proc_am, work_am, min, max;
     proc_am = 11;
-    work_am = 13000;
-    min = 11;
-    max = 110;
+    work_am = 43000;
+    min = 1;
+    max = 100;
 
 //    std::cout << "Please select a working mode (0 - serial, 1 - parallel)" << std::endl;
 //    std::cin >> parallel;
@@ -32,18 +32,34 @@ int main() {
 //    std::cout << "New?" << std::endl;
 //    bool place;
 //    std::cin>> place;
-//    if (place)
-//        GenerateCSV(proc_am, work_am, std::make_pair(min,max));
+
+    auto a = argv[1];
+
+//    if (std::string(argv[1]) == "1") {
+//        std::cout << argv[1];
+        GenerateCSV(proc_am, work_am, std::make_pair(min, max));
+//    }
     InputDate date = ReadCSV();
     unsigned int start_time = clock();
-    Simulating<Basic, Solution, Mutation> sim(date.data, date.proc_num, 100);
-    sim.Solution_find()->PrintResults();
-    unsigned int end_time = clock();
+//    if (std::string(argv[2]) == "0") {
+//        Simulating<Boltzman, Solution, Mutation> sim(date.data, date.proc_num, 100);
+//        sim.Solution_find()->PrintResults();
+//    }
+//    else if (std::string(argv[2]) == "1") {
+//        Simulating<Cauchy, Solution, Mutation> sim(date.data, date.proc_num, 100);
+//        sim.Solution_find()->PrintResults();
+//    }
+//    else {
+//        Simulating<Basic, Solution, Mutation> sim(date.data, date.proc_num, 100);
+//        sim.Solution_find()->PrintResults();
+//    }
+
 //
 
-//    ParallelSimulating<Boltzman,Solution,Mutation> start(4, date.data,  date.proc_num, 100);
-//    start.ParralelSolution()->PrintResults();
+    ParallelSimulating<Boltzman,Solution,Mutation> start(1, date.data,  date.proc_num, 100);
+    start.ParralelSolution()->PrintResults();
 
+    unsigned int end_time = clock();
 
     std::cout << "Program worktime - " << double (end_time - start_time) / CLOCKS_PER_SEC << std::endl;
     return 0;

@@ -1,0 +1,420 @@
+1Answer:
+Proc №0 --- 22582
+Proc №1 --- 22583
+Proc №2 --- 22582
+Proc №3 --- 22584
+Proc №4 --- 22584
+Proc №5 --- 22580
+Proc №6 --- 22580
+Proc №7 --- 22581
+Proc №8 --- 22580
+Proc №9 --- 22583
+Proc №10 --- 22582
+Deviation - 4
+Program worktime - 62.1372
+Answer:
+Proc №0 --- 22582
+Proc №1 --- 22581
+Proc №2 --- 22581
+Proc №3 --- 22583
+Proc №4 --- 22583
+Proc №5 --- 22583
+Proc №6 --- 22582
+Proc №7 --- 22582
+Proc №8 --- 22582
+Proc №9 --- 22581
+Proc №10 --- 22581
+Deviation - 2
+Program worktime - 39.3265
+Answer:
+Proc №0 --- 22581
+Proc №1 --- 22581
+Proc №2 --- 22583
+Proc №3 --- 22583
+Proc №4 --- 22581
+Proc №5 --- 22581
+Proc №6 --- 22582
+Proc №7 --- 22582
+Proc №8 --- 22581
+Proc №9 --- 22583
+Proc №10 --- 22583
+Deviation - 2
+Program worktime - 39.1889
+1Answer:
+Proc №0 --- 22647
+Proc №1 --- 22653
+Proc №2 --- 22651
+Proc №3 --- 22647
+Proc №4 --- 22647
+Proc №5 --- 22656
+Proc №6 --- 22654
+Proc №7 --- 22656
+Proc №8 --- 22652
+Proc №9 --- 22653
+Proc №10 --- 22655
+Deviation - 9
+Program worktime - 60.8765
+Answer:
+Proc №0 --- 22649
+Proc №1 --- 22653
+Proc №2 --- 22654
+Proc №3 --- 22649
+Proc №4 --- 22652
+Proc №5 --- 22651
+Proc №6 --- 22652
+Proc №7 --- 22654
+Proc №8 --- 22654
+Proc №9 --- 22654
+Proc №10 --- 22649
+Deviation - 5
+Program worktime - 40.5856
+Answer:
+Proc №0 --- 22654
+Proc №1 --- 22650
+Proc №2 --- 22651
+Proc №3 --- 22651
+Proc №4 --- 22652
+Proc №5 --- 22654
+Proc №6 --- 22650
+Proc №7 --- 22652
+Proc №8 --- 22653
+Proc №9 --- 22651
+Proc №10 --- 22653
+Deviation - 4
+Program worktime - 38.8134
+1Answer:
+Proc №0 --- 22694
+Proc №1 --- 22698
+Proc №2 --- 22694
+Proc №3 --- 22698
+Proc №4 --- 22694
+Proc №5 --- 22694
+Proc №6 --- 22696
+Proc №7 --- 22698
+Proc №8 --- 22697
+Proc №9 --- 22695
+Proc №10 --- 22698
+Deviation - 4
+Program worktime - 60.1189
+Answer:
+Proc №0 --- 22694
+Proc №1 --- 22695
+Proc №2 --- 22698
+Proc №3 --- 22695
+Proc №4 --- 22698
+Proc №5 --- 22698
+Proc №6 --- 22694
+Proc №7 --- 22697
+Proc №8 --- 22698
+Proc №9 --- 22694
+Proc №10 --- 22695
+Deviation - 4
+Program worktime - 41.6424
+Answer:
+Proc №0 --- 22696
+Proc №1 --- 22696
+Proc №2 --- 22697
+Proc №3 --- 22695
+Proc №4 --- 22695
+Proc №5 --- 22697
+Proc №6 --- 22696
+Proc №7 --- 22695
+Proc №8 --- 22696
+Proc №9 --- 22696
+Proc №10 --- 22697
+Deviation - 2
+Program worktime - 39.3169
+1Answer:
+Proc №0 --- 22558
+Proc №1 --- 22556
+Proc №2 --- 22559
+Proc №3 --- 22556
+Proc №4 --- 22556
+Proc №5 --- 22561
+Proc №6 --- 22561
+Proc №7 --- 22557
+Proc №8 --- 22558
+Proc №9 --- 22561
+Proc №10 --- 22558
+Deviation - 5
+Program worktime - 61.2467
+Answer:
+Proc №0 --- 22558
+Proc №1 --- 22557
+Proc №2 --- 22559
+Proc №3 --- 22559
+Proc №4 --- 22559
+Proc №5 --- 22559
+Proc №6 --- 22559
+Proc №7 --- 22557
+Proc №8 --- 22557
+Proc №9 --- 22559
+Proc №10 --- 22558
+Deviation - 2
+Program worktime - 40.5711
+Answer:
+Proc №0 --- 22559
+Proc №1 --- 22558
+Proc №2 --- 22556
+Proc №3 --- 22556
+Proc №4 --- 22560
+Proc №5 --- 22559
+Proc №6 --- 22558
+Proc №7 --- 22556
+Proc №8 --- 22560
+Proc №9 --- 22560
+Proc №10 --- 22559
+Deviation - 4
+Program worktime - 39.7713
+1Answer:
+Proc №0 --- 22679
+Proc №1 --- 22678
+Proc №2 --- 22677
+Proc №3 --- 22677
+Proc №4 --- 22679
+Proc №5 --- 22677
+Proc №6 --- 22679
+Proc №7 --- 22678
+Proc №8 --- 22678
+Proc №9 --- 22677
+Proc №10 --- 22679
+Deviation - 2
+Program worktime - 58.6525
+Answer:
+Proc №0 --- 22680
+Proc №1 --- 22676
+Proc №2 --- 22680
+Proc №3 --- 22676
+Proc №4 --- 22678
+Proc №5 --- 22679
+Proc №6 --- 22679
+Proc №7 --- 22677
+Proc №8 --- 22676
+Proc №9 --- 22677
+Proc №10 --- 22680
+Deviation - 4
+Program worktime - 38.4303
+Answer:
+Proc №0 --- 22677
+Proc №1 --- 22676
+Proc №2 --- 22678
+Proc №3 --- 22679
+Proc №4 --- 22678
+Proc №5 --- 22676
+Proc №6 --- 22680
+Proc №7 --- 22679
+Proc №8 --- 22676
+Proc №9 --- 22679
+Proc №10 --- 22680
+Deviation - 4
+Program worktime - 38.9447
+1Answer:
+Proc №0 --- 22589
+Proc №1 --- 22587
+Proc №2 --- 22586
+Proc №3 --- 22585
+Proc №4 --- 22586
+Proc №5 --- 22591
+Proc №6 --- 22585
+Proc №7 --- 22587
+Proc №8 --- 22588
+Proc №9 --- 22591
+Proc №10 --- 22586
+Deviation - 6
+Program worktime - 59.6997
+Answer:
+Proc №0 --- 22586
+Proc №1 --- 22587
+Proc №2 --- 22586
+Proc №3 --- 22589
+Proc №4 --- 22586
+Proc №5 --- 22589
+Proc №6 --- 22588
+Proc №7 --- 22588
+Proc №8 --- 22587
+Proc №9 --- 22586
+Proc №10 --- 22589
+Deviation - 3
+Program worktime - 38.5641
+Answer:
+Proc №0 --- 22587
+Proc №1 --- 22589
+Proc №2 --- 22585
+Proc №3 --- 22585
+Proc №4 --- 22589
+Proc №5 --- 22588
+Proc №6 --- 22589
+Proc №7 --- 22585
+Proc №8 --- 22587
+Proc №9 --- 22588
+Proc №10 --- 22589
+Deviation - 4
+Program worktime - 40.337
+1Answer:
+Proc №0 --- 22698
+Proc №1 --- 22693
+Proc №2 --- 22689
+Proc №3 --- 22695
+Proc №4 --- 22697
+Proc №5 --- 22698
+Proc №6 --- 22694
+Proc №7 --- 22689
+Proc №8 --- 22693
+Proc №9 --- 22691
+Proc №10 --- 22698
+Deviation - 9
+Program worktime - 62.337
+Answer:
+Proc №0 --- 22694
+Proc №1 --- 22694
+Proc №2 --- 22694
+Proc №3 --- 22694
+Proc №4 --- 22694
+Proc №5 --- 22695
+Proc №6 --- 22694
+Proc №7 --- 22694
+Proc №8 --- 22694
+Proc №9 --- 22694
+Proc №10 --- 22694
+Deviation - 1
+Program worktime - 40.5204
+Answer:
+Proc №0 --- 22692
+Proc №1 --- 22692
+Proc №2 --- 22696
+Proc №3 --- 22695
+Proc №4 --- 22695
+Proc №5 --- 22695
+Proc №6 --- 22692
+Proc №7 --- 22693
+Proc №8 --- 22696
+Proc №9 --- 22695
+Proc №10 --- 22694
+Deviation - 4
+Program worktime - 41.8919
+1Answer:
+Proc №0 --- 22630
+Proc №1 --- 22633
+Proc №2 --- 22633
+Proc №3 --- 22629
+Proc №4 --- 22631
+Proc №5 --- 22630
+Proc №6 --- 22626
+Proc №7 --- 22631
+Proc №8 --- 22626
+Proc №9 --- 22630
+Proc №10 --- 22626
+Deviation - 7
+Program worktime - 57.6799
+Answer:
+Proc №0 --- 22630
+Proc №1 --- 22630
+Proc №2 --- 22630
+Proc №3 --- 22630
+Proc №4 --- 22629
+Proc №5 --- 22629
+Proc №6 --- 22629
+Proc №7 --- 22629
+Proc №8 --- 22629
+Proc №9 --- 22630
+Proc №10 --- 22630
+Deviation - 1
+Program worktime - 38.0092
+Answer:
+Proc №0 --- 22629
+Proc №1 --- 22631
+Proc №2 --- 22630
+Proc №3 --- 22628
+Proc №4 --- 22629
+Proc №5 --- 22631
+Proc №6 --- 22630
+Proc №7 --- 22628
+Proc №8 --- 22631
+Proc №9 --- 22630
+Proc №10 --- 22628
+Deviation - 3
+Program worktime - 36.4671
+1Answer:
+Proc №0 --- 22604
+Proc №1 --- 22603
+Proc №2 --- 22602
+Proc №3 --- 22604
+Proc №4 --- 22604
+Proc №5 --- 22600
+Proc №6 --- 22598
+Proc №7 --- 22598
+Proc №8 --- 22601
+Proc №9 --- 22600
+Proc №10 --- 22599
+Deviation - 6
+Program worktime - 56.0385
+Answer:
+Proc №0 --- 22602
+Proc №1 --- 22603
+Proc №2 --- 22601
+Proc №3 --- 22600
+Proc №4 --- 22600
+Proc №5 --- 22601
+Proc №6 --- 22601
+Proc №7 --- 22603
+Proc №8 --- 22602
+Proc №9 --- 22600
+Proc №10 --- 22600
+Deviation - 3
+Program worktime - 38.0684
+Answer:
+Proc №0 --- 22600
+Proc №1 --- 22601
+Proc №2 --- 22603
+Proc №3 --- 22600
+Proc №4 --- 22603
+Proc №5 --- 22603
+Proc №6 --- 22600
+Proc №7 --- 22600
+Proc №8 --- 22600
+Proc №9 --- 22600
+Proc №10 --- 22603
+Deviation - 3
+Program worktime - 37.5848
+1Answer:
+Proc №0 --- 22594
+Proc №1 --- 22597
+Proc №2 --- 22597
+Proc №3 --- 22594
+Proc №4 --- 22596
+Proc №5 --- 22593
+Proc №6 --- 22596
+Proc №7 --- 22595
+Proc №8 --- 22596
+Proc №9 --- 22593
+Proc №10 --- 22594
+Deviation - 4
+Program worktime - 60.206
+Answer:
+Proc №0 --- 22594
+Proc №1 --- 22596
+Proc №2 --- 22596
+Proc №3 --- 22595
+Proc №4 --- 22595
+Proc №5 --- 22594
+Proc №6 --- 22596
+Proc №7 --- 22594
+Proc №8 --- 22596
+Proc №9 --- 22595
+Proc №10 --- 22594
+Deviation - 2
+Program worktime - 41.8853
+Answer:
+Proc №0 --- 22593
+Proc №1 --- 22596
+Proc №2 --- 22597
+Proc №3 --- 22595
+Proc №4 --- 22597
+Proc №5 --- 22593
+Proc №6 --- 22595
+Proc №7 --- 22594
+Proc №8 --- 22597
+Proc №9 --- 22595
+Proc №10 --- 22593
+Deviation - 4
+Program worktime - 37.5611

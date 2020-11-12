@@ -112,6 +112,7 @@ public:
 
     virtual int CriterionGet() {
         std::vector <int> loads_len;
+
         for (size_t i=0;  i<amount; i++)
             loads_len.emplace_back(global_loading[i].GetLen());
         return *max_element(loads_len.begin(), loads_len.end()) - *min_element(loads_len.begin(), loads_len.end());

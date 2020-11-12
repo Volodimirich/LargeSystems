@@ -25,21 +25,44 @@ public:
 
     void InitWorkTask(){
         Simulating<T,S,M> sim(inform, cores_amount, temp);
+        BaseSolution* sol = sim.Solution_find()->GetCopy();
         writelock.lock();
-        worktask.emplace_back(sim.Solution_find()->GetCopy());
+        worktask.emplace_back(sol);
         writelock.unlock();
     };
 
     BaseSolution* ParralelSolution() {
         std::vector<std::thread> thread_vec(num_procs);
-        for (size_t i=0; i<num_procs; i++)
-            thread_vec[i] = std::thread(&ParallelSimulating::InitWorkTask, this);
+        BaseSolution* best = nullptr;
+        size_t it=0;
 
-        for (auto &th: thread_vec)
-            if (th.joinable())
-                th.join();
+        while (it<10) {
+            for (size_t i = 0; i < num_procs; i++)
+                thread_vec[i] = std::thread(&ParallelSimulating::InitWorkTask, this);
 
-        return GetBestSolution();
+            for (auto &th: thread_vec)
+                if (th.joinable())
+                    th.join();
+
+            if (best) {
+                BaseSolution* new_solution = this->GetBestSolution();
+                if (new_solution->CriterionGet() < best->CriterionGet()) {
+                    delete (best);
+                    best = new_solution->GetCopy();
+                    delete (new_solution);
+                    it = 0;
+                } else {
+                    it++;
+                }
+            } else {
+                best = this->GetBestSolution()->GetCopy();
+                it=1;
+            }
+            thread_vec.clear();
+            thread_vec.resize(num_procs);
+            worktask.clear();
+        }
+        return best;
 
     }
 
@@ -47,7 +70,7 @@ public:
 
     BaseSolution* GetBestSolution() {
         std::vector <int> allcrit;
-        BaseSolution* tst;
+        BaseSolution* tst = nullptr;
         for (auto &it: worktask)
             allcrit.emplace_back(it->CriterionGet());
 
