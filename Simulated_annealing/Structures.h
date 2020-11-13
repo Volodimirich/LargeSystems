@@ -33,6 +33,12 @@ public:
         return load;
     }
 
+    void Out() {
+        for (auto& it: load) {
+            std::cout << it << std::endl;
+        }
+    }
+
     int GetLen() {
         int current = 0;
         for (auto & it : load)
@@ -127,6 +133,8 @@ public:
 
     }
 
+
+
     virtual bool EmptyLine(int position) {
         return global_loading[position].Empty();
     }
@@ -135,8 +143,8 @@ public:
         std::cout << "Answer:" << std::endl;
         for (size_t i=0; i<amount; i++) {
             std::cout << "Proc №"<< i << " --- " << global_loading[i].GetLen() << std::endl;
+//            global_loading[i].Out();
         }
-
         std::cout << "Deviation - " << this->CriterionGet() << std::endl;
     }
 
