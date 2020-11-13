@@ -27,7 +27,7 @@ InputDate ReadCSV() {
     std::string line;
     size_t delimeter;
     InputDate Result;
-    input_date.open("input.csv");
+    input_date.open("../input.csv");
 
     getline(input_date, line);
 

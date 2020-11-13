@@ -22,11 +22,14 @@ private:
     size_t it = 0;
     Temperature *temp_module; //NeedFix
 public:
-    Simulating(std::vector <int> data, int cores, int start_temp) {
-        result = new M(data); //NeedFix
-        solution = result->InitSolution(cores);
+    Simulating(std::vector <int> data, int cores, int start_temp, BaseSolution *sol = nullptr) {
+        result = new M(data);
+        if (not sol)
+            solution = result->InitSolution(cores);
+        else
+            solution = sol->GetCopy();
         best = solution->GetCopy();
-        temp_module = new T(start_temp); //NeedFix
+        temp_module = new T(start_temp);
 
     }
     ~Simulating() {

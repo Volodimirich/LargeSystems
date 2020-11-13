@@ -23,8 +23,8 @@ public:
     ParallelSimulating(int procs, std::vector <int> data, int cores, int start_temp): num_procs(procs),
         temp(start_temp), cores_amount(cores), inform(data) {}
 
-    void InitWorkTask(){
-        Simulating<T,S,M> sim(inform, cores_amount, temp);
+    void InitWorkTask(BaseSolution* best){
+        Simulating<T,S,M> sim(inform, cores_amount, temp, best);
         BaseSolution* sol = sim.Solution_find()->GetCopy();
         writelock.lock();
         worktask.emplace_back(sol);
@@ -34,16 +34,15 @@ public:
     BaseSolution* ParralelSolution() {
         std::vector<std::thread> thread_vec(num_procs);
         BaseSolution* best = nullptr;
-        size_t it=0;
+        int it=0;
 
         while (it<10) {
             for (size_t i = 0; i < num_procs; i++)
-                thread_vec[i] = std::thread(&ParallelSimulating::InitWorkTask, this);
+                thread_vec[i] = std::thread(&ParallelSimulating::InitWorkTask, this, best);
 
             for (auto &th: thread_vec)
                 if (th.joinable())
                     th.join();
-            std::cout<<it << std::endl;
             if (best) {
                 BaseSolution* new_solution = this->GetBestSolution();
                 if (new_solution->CriterionGet() < best->CriterionGet()) {
