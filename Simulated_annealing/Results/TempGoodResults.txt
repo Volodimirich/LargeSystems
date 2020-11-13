@@ -1,0 +1,276 @@
+1___40
+Boltzman launch
+Answer:
+Proc №0 --- 76910
+Proc №1 --- 76915
+Proc №2 --- 76916
+Proc №3 --- 76910
+Proc №4 --- 76916
+Proc №5 --- 76912
+Proc №6 --- 76914
+Proc №7 --- 76911
+Proc №8 --- 76916
+Proc №9 --- 76912
+Proc №10 --- 76911
+Deviation - 6
+Program worktime - 40.4737s
+Cauchy launch
+Answer:
+Proc №0 --- 76911
+Proc №1 --- 76915
+Proc №2 --- 76911
+Proc №3 --- 76910
+Proc №4 --- 76914
+Proc №5 --- 76916
+Proc №6 --- 76914
+Proc №7 --- 76910
+Proc №8 --- 76911
+Proc №9 --- 76915
+Proc №10 --- 76916
+Deviation - 6
+Program worktime - 33.4237s
+Basic launch
+Answer:
+Proc №0 --- 76912
+Proc №1 --- 76915
+Proc №2 --- 76914
+Proc №3 --- 76915
+Proc №4 --- 76911
+Proc №5 --- 76911
+Proc №6 --- 76913
+Proc №7 --- 76912
+Proc №8 --- 76913
+Proc №9 --- 76915
+Proc №10 --- 76912
+Deviation - 4
+Program worktime - 34.9783s
+1___40
+Boltzman launch
+Answer:
+Proc №0 --- 76695
+Proc №1 --- 76700
+Proc №2 --- 76700
+Proc №3 --- 76702
+Proc №4 --- 76703
+Proc №5 --- 76701
+Proc №6 --- 76696
+Proc №7 --- 76703
+Proc №8 --- 76695
+Proc №9 --- 76697
+Proc №10 --- 76701
+Deviation - 8
+Program worktime - 42.709s
+Cauchy launch
+Answer:
+Proc №0 --- 76699
+Proc №1 --- 76701
+Proc №2 --- 76702
+Proc №3 --- 76698
+Proc №4 --- 76696
+Proc №5 --- 76696
+Proc №6 --- 76699
+Proc №7 --- 76702
+Proc №8 --- 76700
+Proc №9 --- 76701
+Proc №10 --- 76699
+Deviation - 6
+Program worktime - 32.0811s
+Basic launch
+Answer:
+Proc №0 --- 76699
+Proc №1 --- 76700
+Proc №2 --- 76697
+Proc №3 --- 76704
+Proc №4 --- 76697
+Proc №5 --- 76696
+Proc №6 --- 76702
+Proc №7 --- 76697
+Proc №8 --- 76696
+Proc №9 --- 76704
+Proc №10 --- 76701
+Deviation - 8
+Program worktime - 34.4002s
+1___40
+Boltzman launch
+Answer:
+Proc №0 --- 76427
+Proc №1 --- 76429
+Proc №2 --- 76420
+Proc №3 --- 76427
+Proc №4 --- 76424
+Proc №5 --- 76422
+Proc №6 --- 76420
+Proc №7 --- 76429
+Proc №8 --- 76422
+Proc №9 --- 76427
+Proc №10 --- 76428
+Deviation - 9
+Program worktime - 39.9449s
+Cauchy launch
+Answer:
+Proc №0 --- 76423
+Proc №1 --- 76424
+Proc №2 --- 76428
+Proc №3 --- 76424
+Proc №4 --- 76422
+Proc №5 --- 76425
+Proc №6 --- 76427
+Proc №7 --- 76428
+Proc №8 --- 76422
+Proc №9 --- 76427
+Proc №10 --- 76425
+Deviation - 6
+Program worktime - 32.4349s
+Basic launch
+Answer:
+Proc №0 --- 76427
+Proc №1 --- 76422
+Proc №2 --- 76426
+Proc №3 --- 76422
+Proc №4 --- 76427
+Proc №5 --- 76424
+Proc №6 --- 76424
+Proc №7 --- 76426
+Proc №8 --- 76427
+Proc №9 --- 76426
+Proc №10 --- 76424
+Deviation - 5
+Program worktime - 34.1882s
+1___40
+Boltzman launch
+Answer:
+Proc №0 --- 113622
+Proc №1 --- 113616
+Proc №2 --- 113618
+Proc №3 --- 113620
+Proc №4 --- 113618
+Proc №5 --- 113622
+Proc №6 --- 113616
+Proc №7 --- 113622
+Proc №8 --- 113619
+Proc №9 --- 113620
+Proc №10 --- 113617
+Deviation - 6
+Program worktime - 86.4508s
+Cauchy launch
+Answer:
+Proc №0 --- 113622
+Proc №1 --- 113618
+Proc №2 --- 113622
+Proc №3 --- 113618
+Proc №4 --- 113618
+Proc №5 --- 113617
+Proc №6 --- 113617
+Proc №7 --- 113617
+Proc №8 --- 113619
+Proc №9 --- 113620
+Proc №10 --- 113622
+Deviation - 5
+Program worktime - 69.476s
+Basic launch
+Answer:
+Proc №0 --- 113621
+Proc №1 --- 113616
+Proc №2 --- 113620
+Proc №3 --- 113619
+Proc №4 --- 113621
+Proc №5 --- 113621
+Proc №6 --- 113621
+Proc №7 --- 113617
+Proc №8 --- 113617
+Proc №9 --- 113616
+Proc №10 --- 113621
+Deviation - 5
+Program worktime - 74.1279s
+1___40
+Boltzman launch
+Answer:
+Proc №0 --- 114006
+Proc №1 --- 114004
+Proc №2 --- 114004
+Proc №3 --- 114006
+Proc №4 --- 114004
+Proc №5 --- 114004
+Proc №6 --- 114007
+Proc №7 --- 114005
+Proc №8 --- 114006
+Proc №9 --- 114007
+Proc №10 --- 114005
+Deviation - 3
+Program worktime - 83.0513s
+Cauchy launch
+Answer:
+Proc №0 --- 114005
+Proc №1 --- 114003
+Proc №2 --- 114008
+Proc №3 --- 114004
+Proc №4 --- 114004
+Proc №5 --- 114003
+Proc №6 --- 114005
+Proc №7 --- 114004
+Proc №8 --- 114007
+Proc №9 --- 114007
+Proc №10 --- 114008
+Deviation - 5
+Program worktime - 70.7752s
+Basic launch
+Answer:
+Proc №0 --- 114011
+Proc №1 --- 114000
+Proc №2 --- 114007
+Proc №3 --- 114007
+Proc №4 --- 114001
+Proc №5 --- 114007
+Proc №6 --- 114010
+Proc №7 --- 114003
+Proc №8 --- 114000
+Proc №9 --- 114011
+Proc №10 --- 114001
+Deviation - 11
+Program worktime - 74.3042s
+1___40
+Boltzman launch
+Answer:
+Proc №0 --- 113554
+Proc №1 --- 113559
+Proc №2 --- 113560
+Proc №3 --- 113557
+Proc №4 --- 113558
+Proc №5 --- 113559
+Proc №6 --- 113563
+Proc №7 --- 113554
+Proc №8 --- 113554
+Proc №9 --- 113563
+Proc №10 --- 113555
+Deviation - 9
+Program worktime - 85.4438s
+Cauchy launch
+Answer:
+Proc №0 --- 113560
+Proc №1 --- 113557
+Proc №2 --- 113559
+Proc №3 --- 113557
+Proc №4 --- 113560
+Proc №5 --- 113556
+Proc №6 --- 113558
+Proc №7 --- 113556
+Proc №8 --- 113560
+Proc №9 --- 113556
+Proc №10 --- 113557
+Deviation - 4
+Program worktime - 70.6801s
+Basic launch
+Answer:
+Proc №0 --- 113557
+Proc №1 --- 113557
+Proc №2 --- 113557
+Proc №3 --- 113559
+Proc №4 --- 113558
+Proc №5 --- 113557
+Proc №6 --- 113556
+Proc №7 --- 113556
+Proc №8 --- 113561
+Proc №9 --- 113557
+Proc №10 --- 113561
+Deviation - 5
+Program worktime - 72.3564s

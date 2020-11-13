@@ -1,0 +1,138 @@
+1___40
+Boltzman launch
+Answer:
+Proc №0 --- 76168
+Proc №1 --- 76152
+Proc №2 --- 76165
+Proc №3 --- 76161
+Proc №4 --- 76158
+Proc №5 --- 76150
+Proc №6 --- 76150
+Proc №7 --- 76165
+Proc №8 --- 76168
+Proc №9 --- 76150
+Proc №10 --- 76165
+Deviation - 18
+Program worktime - 43.454s
+Cauchy launch
+Answer:
+Proc №0 --- 76159
+Proc №1 --- 76157
+Proc №2 --- 76158
+Proc №3 --- 76160
+Proc №4 --- 76162
+Proc №5 --- 76162
+Proc №6 --- 76157
+Proc №7 --- 76162
+Proc №8 --- 76159
+Proc №9 --- 76158
+Proc №10 --- 76158
+Deviation - 5
+Program worktime - 34.3083s
+Basic launch
+Answer:
+Proc №0 --- 76162
+Proc №1 --- 76161
+Proc №2 --- 76158
+Proc №3 --- 76156
+Proc №4 --- 76157
+Proc №5 --- 76159
+Proc №6 --- 76159
+Proc №7 --- 76161
+Proc №8 --- 76156
+Proc №9 --- 76161
+Proc №10 --- 76162
+Deviation - 6
+Program worktime - 37.599s
+1___40
+Boltzman launch
+Answer:
+Proc №0 --- 76621
+Proc №1 --- 76622
+Proc №2 --- 76622
+Proc №3 --- 76624
+Proc №4 --- 76623
+Proc №5 --- 76624
+Proc №6 --- 76622
+Proc №7 --- 76621
+Proc №8 --- 76621
+Proc №9 --- 76620
+Proc №10 --- 76622
+Deviation - 4
+Program worktime - 46.448s
+Cauchy launch
+Answer:
+Proc №0 --- 76621
+Proc №1 --- 76621
+Proc №2 --- 76623
+Proc №3 --- 76621
+Proc №4 --- 76622
+Proc №5 --- 76622
+Proc №6 --- 76621
+Proc №7 --- 76622
+Proc №8 --- 76621
+Proc №9 --- 76624
+Proc №10 --- 76624
+Deviation - 3
+Program worktime - 37.0239s
+Basic launch
+Answer:
+Proc №0 --- 76621
+Proc №1 --- 76619
+Proc №2 --- 76620
+Proc №3 --- 76622
+Proc №4 --- 76624
+Proc №5 --- 76619
+Proc №6 --- 76626
+Proc №7 --- 76622
+Proc №8 --- 76621
+Proc №9 --- 76622
+Proc №10 --- 76626
+Deviation - 7
+Program worktime - 35.0798s
+1___40
+Boltzman launch
+Answer:
+Proc №0 --- 76290
+Proc №1 --- 76292
+Proc №2 --- 76288
+Proc №3 --- 76288
+Proc №4 --- 76291
+Proc №5 --- 76291
+Proc №6 --- 76292
+Proc №7 --- 76289
+Proc №8 --- 76285
+Proc №9 --- 76285
+Proc №10 --- 76290
+Deviation - 7
+Program worktime - 44.7473s
+Cauchy launch
+Answer:
+Proc №0 --- 76292
+Proc №1 --- 76290
+Proc №2 --- 76289
+Proc №3 --- 76286
+Proc №4 --- 76292
+Proc №5 --- 76288
+Proc №6 --- 76289
+Proc №7 --- 76286
+Proc №8 --- 76292
+Proc №9 --- 76288
+Proc №10 --- 76289
+Deviation - 6
+Program worktime - 35.9808s
+Basic launch
+Answer:
+Proc №0 --- 76288
+Proc №1 --- 76287
+Proc №2 --- 76289
+Proc №3 --- 76288
+Proc №4 --- 76292
+Proc №5 --- 76290
+Proc №6 --- 76287
+Proc №7 --- 76289
+Proc №8 --- 76290
+Proc №9 --- 76289
+Proc №10 --- 76292
+Deviation - 5
+Program worktime - 41.6833s

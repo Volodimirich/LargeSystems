@@ -1,0 +1,17 @@
+1___40
+Boltzman launch
+Answer:
+Proc №0 --- 96529
+Proc №1 --- 96528
+Proc №2 --- 96528
+Proc №3 --- 96526
+Proc №4 --- 96529
+Proc №5 --- 96526
+Proc №6 --- 96526
+Proc №7 --- 96526
+Proc №8 --- 96527
+Proc №9 --- 96531
+Proc №10 --- 96531
+Deviation - 5
+Program worktime - 64.6964s
+Cauchy launch

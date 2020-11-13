@@ -15,10 +15,10 @@ int main(int argc, char *argv[]) {
     bool parallel = 0;
     size_t mode = 0;
     int proc_am, work_am, min, max;
-    proc_am = 110;
-    work_am = 1100;
+    proc_am = 11;
+    work_am = 4500;
     min = 1;
-    max = 10;
+    max = 40;
 
 //    std::cout << "Please select a working mode (0 - serial, 1 - parallel)" << std::endl;
 //    std::cin >> parallel;
@@ -41,16 +41,10 @@ int main(int argc, char *argv[]) {
     GenerateCSV(proc_am, work_am, std::make_pair(min, max));
 //    }
     InputDate date = ReadCSV();
-    std::cout << min << "___" << max << std::endl;
-    std::cout << "Solo launch" << std::endl;
     auto start_time = std::chrono::high_resolution_clock::now();
 //    if (std::string(argv[2]) == "0") {
-    Simulating<Cauchy, Solution, Mutation> sim(date.data, date.proc_num, 100);
-    sim.Solution_find()->PrintResults();
-    auto end_time = std::chrono::high_resolution_clock::now();
-    std::chrono::duration<double, std::milli> worktime = end_time - start_time;
-    std::cout << "Program worktime - " << worktime.count()/1000 <<"s" << std::endl;
-
+//        Simulating<Boltzman, Solution, Mutation> sim(date.data, date.proc_num, 100);
+//        sim.Solution_find()->PrintResults();
 //    }
 //    else if (std::string(argv[2]) == "1") {
 //        Simulating<Cauchy, Solution, Mutation> sim(date.data, date.proc_num, 100);
@@ -62,30 +56,13 @@ int main(int argc, char *argv[]) {
 //    }
 
 //
-    std::cout << "Parallel launch 1" << std::endl;
-    auto start_time1 = std::chrono::high_resolution_clock::now();
-    ParallelSimulating<Cauchy,Solution,Mutation> start(3, date.data,  date.proc_num, 100);
+
+    ParallelSimulating<Cauchy,Solution,Mutation> start(1, date.data,  date.proc_num, 100);
     start.ParralelSolution()->PrintResults();
-    auto end_time1 = std::chrono::high_resolution_clock::now();
-    std::chrono::duration<double, std::milli> worktime1 = end_time1 - start_time1;
-    std::cout << "Program worktime - " << worktime1.count()/1000 <<"s" << std::endl;
 
-    std::cout << "Parallel launch2" << std::endl;
-    auto start_time2 = std::chrono::high_resolution_clock::now();
-    ParallelSimulating<Cauchy,Solution,Mutation> start2(3, date.data,  date.proc_num, 100);
-    start2.ParralelSolution()->PrintResults();
-    auto end_time2 = std::chrono::high_resolution_clock::now();
-    std::chrono::duration<double, std::milli> worktime2 = end_time2 - start_time2;
-    std::cout << "Program worktime - " << worktime2.count()/1000 <<"s" << std::endl;
+    auto end_time = std::chrono::high_resolution_clock::now();
+    std::chrono::duration<double, std::milli> worktime = end_time - start_time;
 
-    std::cout << "Parallel launch3" << std::endl;
-    auto start_time3 = std::chrono::high_resolution_clock::now();
-    ParallelSimulating<Cauchy,Solution,Mutation> start3(3, date.data,  date.proc_num, 100);
-    start3.ParralelSolution()->PrintResults();
-    auto end_time3 = std::chrono::high_resolution_clock::now();
-    std::chrono::duration<double, std::milli> worktime3 = end_time3 - start_time3;
-    std::cout << "Program worktime - " << worktime3.count()/1000 <<"s" << std::endl;
-
-
+    std::cout << "Program worktime - " << worktime.count()/1000 <<"s" << std::endl;
     return 0;
 }
