@@ -2,13 +2,18 @@
 // Created by voland on 08.12.2020.
 //
 
-#ifndef MATH_LIBRARY_FACTORY_H
-#define MATH_LIBRARY_FACTORY_H
+#include <memory>
+#include <iostream>
+#include <cmath>
+#include <string>
+#include <initializer_list>
+#include <stdexcept>
 
 
-class Factory {
-
+class FuncFactory {
+public:
+    std::shared_ptr<TFunction> Create(std::string func, const std::initializer_list<double> &input);
+    std::shared_ptr<TFunction> Create(std::string func, double input);
+    std::shared_ptr<TFunction> Create(std::string Func);
 };
 
-
-#endif //MATH_LIBRARY_FACTORY_H
