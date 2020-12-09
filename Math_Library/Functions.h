@@ -10,23 +10,13 @@
 #include <initializer_list>
 #include <stdexcept>
 
-#ifndef MATH_LIBRARY_FUNCTIONS_H
-#define MATH_LIBRARY_FUNCTIONS_H
-
-
-enum Operation {
-    ADD,
-    DEL,
-    MUL,
-    DIV
-};
 
 
 class TFunction {
 public:
     virtual const std::string ToString () = 0;
     virtual double Deriv(double Point) = 0;
-    virtual double GetVal(double Point) = 0;
+    virtual double operator()(double Point) = 0;
 //    virtual ~TFunction() {}
 };
 
@@ -46,7 +36,7 @@ public:
         return var * pow(point, var - 1);
     }
 
-    double GetVal(double point) {
+    double operator()(double point) {
         return pow(point, var);
     }
 };
@@ -67,7 +57,7 @@ public:
         return  pow(var, point) * log(var);
     }
 
-    double GetVal(double point) {
+    double operator()(double point) {
         return pow(var, point);
     }
 };
@@ -108,7 +98,7 @@ public:
         return result;
     }
 
-    double GetVal(double point) {
+    double operator()(double point) {
         double result = 0;
 
         for (int i = 0; i < coefficients.size(); i++)
@@ -144,38 +134,79 @@ public:
         }
         else if (operator_name == "*")
         {
-            return function1->Deriv(point)*function2->GetVal(point) + function1->GetVal(point)*function2->Deriv(point);
+            return function1->Deriv(point)*(*function2)(point) + (*function1)(point)*function2->Deriv(point);
         }
         else if (operator_name == "/")
         {
-            return (function1->Deriv(point)*function2->GetVal(point) -
-                    function1->GetVal(point)*function2->Deriv(point)) / pow(function2->GetVal(point), 2);
+            return (function1->Deriv(point) * (*function2)(point) -
+                    (*function1)(point)*function2->Deriv(point)) / pow((*function2)(point), 2);
         }
         else {
             throw std::logic_error("Wrong operation");
         }
     }
 
-    double GetVal(double point) {
-        double result = 0;
+    double operator()(double point) {
         if (operator_name == "+") {
-            return function1->GetVal(point) + function2->GetVal(point);
+            return (*function1)(point) + (*function2)(point);
         }
         else if (operator_name == "-")
         {
-            return function1->GetVal(point) - function2->GetVal(point);
+            return (*function1)(point)- (*function2)(point);
         }
         else if (operator_name == "*")
         {
-            return function2->GetVal(point) * function1->GetVal(point);
+            return (*function1)(point) * (*function2)(point);
         }
         else if (operator_name == "/")
         {
-            return function1->Deriv(point) /  function2->GetVal(point);
+            return  (*function1)(point) / (*function2)(point);
         }
         else {
             throw std::logic_error("Wrong operation");
         }
+    }
+
+    double gradient_descent(TFunction func, size_t itt, double eps = 0.005, double coef = 1) {
+        double solution = 1;
+        for (size_t i = 0; i < itt; i++) {
+            solution = solution - coef * func.Deriv(solution);
+            if (fabs(func(solution)) < eps)
+                return solution;
+        }
+        std::cout << "Can't find solution" << std::endl;
+        return solution;
+    }
+
 };
 
-#endif //MATH_LIBRARY_FUNCTIONS_H
+
+class FuncFactory {
+public:
+    std::shared_ptr<TFunction> Create(std::string func, const std::initializer_list<double> &input)
+    {
+        if (func == "polynomial")
+            return std::shared_ptr<TFunction>(new Polinoms(input));
+        else
+            throw std::logic_error("Initializer list works only with polynomial function");
+    }
+    std::shared_ptr<TFunction> Create(std::string func, double input) {
+        if (func == "power")
+            return std::shared_ptr<TFunction>(new PowerFunc(input));
+        else if (func == "const")
+            return std::shared_ptr<TFunction>(new Polinoms(input));
+        else if (func == "exp")
+            return std::shared_ptr<TFunction>(new Exp(input));
+        else
+            throw std::logic_error("Wrong Function type");
+    }
+    std::shared_ptr<TFunction> Create(std::string Func) {
+        if (Func == "ident")
+            return std::shared_ptr<TFunction>(new Polinoms());
+        else
+            throw std::logic_error("It is not ident function");
+
+    }
+};
+
+
