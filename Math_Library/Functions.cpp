@@ -64,10 +64,13 @@ Polinoms::Polinoms () {
 }
 
 const std::string Polinoms::ToString() {
-    std::string result = std::to_string(coefficients[0]);
-    for (int i = 1; i < coefficients.size(); i++)
+    std::string result = coefficients[0] == 0 ? std::string("") : std::to_string(coefficients[0]);
+    for (size_t i = 1; i < coefficients.size(); i++)
         if (coefficients[i] != 0)
-            result += " + " + std::to_string(coefficients[i]) + "*x^" + std::to_string(i);
+            if (result.empty())
+                result = std::to_string(coefficients[i]) + + "*x^" + std::to_string(i);
+            else
+                result += " + " + std::to_string(coefficients[i]) + "*x^" + std::to_string(i);
 
     return result;
 }
@@ -75,7 +78,7 @@ const std::string Polinoms::ToString() {
 double Polinoms::Deriv(double point) {
     double result = 0;
 
-    for (int i = 1; i < coefficients.size(); i++)
+    for (size_t i = 1; i < coefficients.size(); i++)
         result += coefficients[i] * pow(point, i-1) * i;
 
     return result;
@@ -84,7 +87,7 @@ double Polinoms::Deriv(double point) {
 double Polinoms::operator()(double point) {
     double result = 0;
 
-    for (int i = 0; i < coefficients.size(); i++)
+    for (size_t i = 0; i < coefficients.size(); i++)
         result += coefficients[i] * pow(point, i);
 
     return result;

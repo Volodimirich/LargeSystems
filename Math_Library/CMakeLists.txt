@@ -1,23 +1,24 @@
 cmake_minimum_required(VERSION 3.8)
 project(Math_Library)
 
-set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 find_package(GTest REQUIRED)
 
-set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -Wall")
-#set(CMAKE_CXX_LINK_EXECUTABLE "${CMAKE_CXX_LINK_EXECUTABLE} -ldl")
-#set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g -fopenmp")
+
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -ldl -g -fopenmp")
+
 
 include_directories(
-        include
         ${GTEST_INCLUDE_DIRS}
 )
 
-#target_link_libraries(FM ${GTEST_LIBRARIES} ${LIBS})
+add_executable(MathLib Factory.cpp Functions.cpp main.cpp)
+target_link_libraries(MathLib ${GTEST_LIBRARIES} ${LIBS})
 
-add_executable(${PROJECT_NAME} main.cpp)
-#target_link_libraries(TestFM ${GTEST_LIBRARIES} ${LIBS})
-#enable_testing()
-#add_test(TestFM "./TestFM")
+add_executable(TestMath Factory.cpp Functions.cpp GTest.cpp)
+target_link_libraries(TestMath ${GTEST_LIBRARIES} ${LIBS})
+enable_testing()
+add_test(TestMath "./TestMath")

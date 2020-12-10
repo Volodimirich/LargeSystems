@@ -2,12 +2,18 @@
 // Created by voland on 09.12.2020.
 //
 
+
+#ifndef FUNC_LIB_H
+#define FUNC_LIB_H
+
+
 #include <memory>
 #include <iostream>
 #include <cmath>
 #include <string>
 #include <initializer_list>
 #include <stdexcept>
+#include <vector>
 
 class TFunction {
 public:
@@ -71,3 +77,5 @@ std::shared_ptr<TFunction> operator*(std::shared_ptr<TFunction> &func1, std::sha
 std::shared_ptr<TFunction> operator/(std::shared_ptr<TFunction> &func1, std::shared_ptr<TFunction> &func2);
 
 double gradient_descent(TFunction *func, size_t itt, double eps = 0.005, double coef = 1);
+
+#endif
