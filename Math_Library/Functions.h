@@ -49,6 +49,7 @@ public:
     Polinoms (double numb);
     Polinoms (std::initializer_list<double> numbers);
     Polinoms ();
+    const std::string GetVal(int pos);
     const std::string ToString();
     double Deriv(double point) ;
     double operator()(double point);
@@ -70,12 +71,52 @@ public:
 
 std::shared_ptr<TFunction> operator+(std::shared_ptr<TFunction> func1, std::shared_ptr<TFunction> func2);
 
-std::shared_ptr<TFunction> operator-(std::shared_ptr<TFunction> &func1, std::shared_ptr<TFunction> &func2);
+std::shared_ptr<TFunction> operator-(std::shared_ptr<TFunction> func1, std::shared_ptr<TFunction> func2);
 
-std::shared_ptr<TFunction> operator*(std::shared_ptr<TFunction> &func1, std::shared_ptr<TFunction> &func2);
+std::shared_ptr<TFunction> operator*(std::shared_ptr<TFunction> func1, std::shared_ptr<TFunction> func2);
 
-std::shared_ptr<TFunction> operator/(std::shared_ptr<TFunction> &func1, std::shared_ptr<TFunction> &func2);
+std::shared_ptr<TFunction> operator/(std::shared_ptr<TFunction> func1, std::shared_ptr<TFunction> func2);
 
-double gradient_descent(TFunction *func, size_t itt, double eps = 0.005, double coef = 1);
+
+template<typename Smth>
+std::shared_ptr<TFunction> operator+(std::shared_ptr<TFunction> func1, Smth b) {
+    throw std::logic_error("Bad argument to +");
+}
+
+template<typename Smth>
+std::shared_ptr<TFunction> operator+(Smth a, std::shared_ptr<TFunction> func1) {
+    throw std::logic_error("Bad argument to +");
+}
+
+template<typename Smth>
+std::shared_ptr<TFunction> operator-(std::shared_ptr<TFunction> func1, Smth b) {
+    throw std::logic_error("Bad argument to -");
+}
+
+template<typename Smth>
+std::shared_ptr<TFunction> operator-(Smth a, std::shared_ptr<TFunction> func1) {
+    throw std::logic_error("Bad argument to -");
+}
+template<typename Smth>
+std::shared_ptr<TFunction> operator*(std::shared_ptr<TFunction> func1, Smth b) {
+    throw std::logic_error("Bad argument to *");
+}
+
+template<typename Smth>
+std::shared_ptr<TFunction> operator*(Smth a, std::shared_ptr<TFunction> func1) {
+    throw std::logic_error("Bad argument to *");
+}
+
+template<typename Smth>
+std::shared_ptr<TFunction> operator/(std::shared_ptr<TFunction> func1, Smth b) {
+    throw std::logic_error("Bad argument to /");
+}
+
+template<typename Smth>
+std::shared_ptr<TFunction> operator/(Smth a, std::shared_ptr<TFunction> func1) {
+    throw std::logic_error("Bad argument to /");
+}
+
+double gradient_descent(std::shared_ptr<TFunction> func, size_t itt, double eps = 0.005, double coef = 0.01);
 
 #endif

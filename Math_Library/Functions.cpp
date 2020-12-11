@@ -9,6 +9,8 @@
 #include <string>
 #include <initializer_list>
 #include <stdexcept>
+#include <sstream>
+#include <iomanip>
 
 
 //Power TFunction module
@@ -17,7 +19,12 @@ PowerFunc::PowerFunc (double input) {
 }
 
 const std::string PowerFunc::ToString() {
-    return std::string("x^") + std::to_string(var);
+    std::stringstream output;
+    int prec = var - int(var) < 0.0001 ? 0 : 3;
+    output << std::fixed << std::setprecision(prec) << "x^" << var;
+    return output.str();
+
+//    return std::string("x^") + std::to_string(var);
 }
 
 double PowerFunc::Deriv(double point) {
@@ -35,7 +42,13 @@ Exp::Exp (double input) {
 }
 
 const std::string Exp::ToString() {
-    return std::to_string(var) + std::string("^x");
+    std::stringstream output;
+    int prec = var - int(var) < 0.0001 ? 0 : 3;
+
+    output << std::fixed << std::setprecision(prec) << var <<"^x";
+    return output.str();
+
+//    return std::to_string(var) + std::string("^x");
 }
 
 double Exp::Deriv(double point) {
@@ -63,16 +76,42 @@ Polinoms::Polinoms () {
     coefficients.emplace_back(1);
 }
 
-const std::string Polinoms::ToString() {
-    std::string result = coefficients[0] == 0 ? std::string("") : std::to_string(coefficients[0]);
-    for (size_t i = 1; i < coefficients.size(); i++)
-        if (coefficients[i] != 0)
-            if (result.empty())
-                result = std::to_string(coefficients[i]) + + "*x^" + std::to_string(i);
-            else
-                result += " + " + std::to_string(coefficients[i]) + "*x^" + std::to_string(i);
+const std::string Polinoms::GetVal(int pos) {
+    std::stringstream output;
+    int prec = coefficients[pos] - int(coefficients[pos]) < 0.0001 ? 0 : 3;
+    if (pos == 0) {
+        output << std::fixed << std::setprecision(prec) << coefficients[0];
+    } else if (pos == 1) {
+        if (coefficients[1] == 1)
+            output << "x";
+        else
+            output << std::fixed << std::setprecision(prec) << coefficients[pos] << "*x";
+    } else
+        if (coefficients[pos] == 1)
+            output << std::fixed << std::setprecision(prec) << "x^" << pos;
+        else
+            output << std::fixed << std::setprecision(prec) << coefficients[pos] << "*x^" << pos;
 
-    return result;
+    return output.str();
+}
+
+const std::string Polinoms::ToString() {
+    std::stringstream output;
+    bool started = false;
+    if (coefficients[0] != 0) {
+        output  << GetVal(0);
+        started = true;
+    }
+    for (size_t i = 1; i < coefficients.size(); i++)
+        if (coefficients[i] != 0) {
+            if (started) {
+                output << " + " << GetVal(i);
+            } else {
+                output << GetVal(i);
+                started = true;
+            }
+        }
+    return output.str();
 }
 
 double Polinoms::Deriv(double point) {
@@ -101,7 +140,9 @@ CompFunction::CompFunction(std::shared_ptr<TFunction> func1, std::shared_ptr<TFu
     operator_name = oper;
 }
 const std::string  CompFunction::ToString() {
-    return function1->ToString() + operator_name + function2->ToString();
+    std::stringstream output;
+    output << function1->ToString() << " " + operator_name + " " << function2->ToString();
+    return output.str();
 }
 
 double  CompFunction::Deriv(double point) {
@@ -153,22 +194,24 @@ std::shared_ptr<TFunction> operator+(std::shared_ptr<TFunction> func1, std::shar
     return std::shared_ptr<TFunction> (new CompFunction(func1, func2, "+"));
 }
 
-std::shared_ptr<TFunction> operator-(std::shared_ptr<TFunction> &func1, std::shared_ptr<TFunction> &func2) {
+std::shared_ptr<TFunction> operator-(std::shared_ptr<TFunction> func1, std::shared_ptr<TFunction> func2) {
     return std::shared_ptr<TFunction> (new CompFunction(func1, func2, "-"));
 }
 
-std::shared_ptr<TFunction> operator*(std::shared_ptr<TFunction> &func1, std::shared_ptr<TFunction> &func2) {
+std::shared_ptr<TFunction> operator*(std::shared_ptr<TFunction> func1, std::shared_ptr<TFunction> func2) {
     return std::shared_ptr<TFunction> (new CompFunction(func1, func2, "*"));
 }
 
-std::shared_ptr<TFunction> operator/(std::shared_ptr<TFunction> &func1, std::shared_ptr<TFunction> &func2) {
+std::shared_ptr<TFunction> operator/(std::shared_ptr<TFunction> func1, std::shared_ptr<TFunction> func2) {
     return std::shared_ptr<TFunction> (new CompFunction(func1, func2, "/"));
 }
 
-double gradient_descent(TFunction *func, size_t itt, double eps, double coef) {
+double gradient_descent(std::shared_ptr<TFunction> func, size_t itt, double eps, double coef) {
     double solution = 1;
+    int sign;
     for (size_t i = 0; i < itt; i++) {
-        solution = solution - coef * func->Deriv(solution);
+        sign = (*func)(solution) > 0 ? -1 : 1;
+        solution = solution + sign * coef * func->Deriv(solution);
         if (fabs((*func)(solution)) < eps)
             return solution;
     }
