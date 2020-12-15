@@ -1,10 +1,10 @@
 //
 // Created by voland on 14.12.2020.
 //
-#define FIELD 10
-#define GENSIZE 3
-#define MUTATION_AMOUNT 100
-#define MUTATION_PROBABILITY 0.6
+//#define FIELD 10
+//#define POPULATION_SIZE 3
+//#define MUTATION_AMOUNT 100
+//#define MUTATION_PROBABILITY 0.6
 #include "Genetic.h"
 #include "random"
 #include "set"
@@ -20,7 +20,7 @@ size_t Estimation::NeighborReaction(space &gen, std::pair<size_t, size_t> pos){
             if (pos_x == 0 and pos_y == 0)
                 break;
 
-            if (pos.first + i >= 0 and pos.second + i >= 0 and pos.first + i <= FIELD and pos.second + i <= FIELD) {
+            if (pos_x >= 0 and pos_y >= 0 and pos_x < FIELD and pos_y < FIELD) {
                 if (gen[pos_x][pos_y])
                     reaction++;
             }
@@ -33,45 +33,54 @@ size_t Estimation::NeighborReaction(space &gen, std::pair<size_t, size_t> pos){
         return 2;
 }
 
-space Estimation::LifeStart(space &gen, size_t step_amount) {
-    space new_gen = gen;
-
+int Estimation::LifeStart(space gen, size_t step_amount, bool last) {
+    space old_gen;
+    bool changed = false;
     for (size_t itt=0; itt<step_amount; itt++) {
-        for (size_t x = 0; x <= FIELD; x++)
-            for (size_t y = 0; y <= FIELD; y++) {
+        old_gen = gen;
+        for (size_t x = 0; x < FIELD; x++)
+            for (size_t y = 0; y < FIELD; y++) {
                 std::pair<size_t, size_t> pos = {x, y};
-                if ((new_gen[x][y] and NeighborReaction(new_gen, pos)) or (NeighborReaction(new_gen, pos) == 2))
-                    new_gen[x][y] = 1;
+                size_t neighbor = NeighborReaction(old_gen, pos);
+                auto old_elem = gen[x][y];
+                if ((gen[x][y] and neighbor) or (neighbor == 2))
+                    gen[x][y] = 1;
                 else
-                    new_gen[x][y] = 0;
+                    gen[x][y] = 0;
+                if (last and !changed and gen[x][y] != old_elem)
+                    changed = true;
             }
+
     }
-    return new_gen;
+
+    return int(changed);
 }
 
-std::vector <std::pair<space,int>> Estimation::GetEsimation(std::vector <space> &gen) {
+
+std::vector <std::pair<space,int>> Estimation::GetEstimation(std::vector <space> &gen) {
     std::vector <space> new_gen = gen;
     std::vector <std::pair<space,int>> result;
     int cur;
+    std::vector<int> vec_changed;
 
-    for (size_t i=0; i<GENSIZE; i++){
+    for (size_t i=0; i<POPULATION_SIZE; i++){
         LifeStart(new_gen[i], MUTATION_AMOUNT - 1);
     }
 
-    std::vector <space> last_gen = new_gen;
-    for (size_t i=0; i<GENSIZE; i++){
-        LifeStart(new_gen[i], 1);
+    for (size_t i=0; i<POPULATION_SIZE; i++){
+        vec_changed.emplace_back(LifeStart(new_gen[i], 1, true));
     }
 
 
-    for (size_t num=0; num<GENSIZE; num++){
+    for (size_t num=0; num<POPULATION_SIZE; num++){
         cur = 0;
-        for (size_t i = 0; i < last_gen[num].size(); i++) {
-            for (size_t j = 0; j < last_gen[num][0].size(); j++)
-                if (last_gen[num][i][j])
+        for (size_t i = 0; i < new_gen[num].size(); i++) {
+            for (size_t j = 0; j < new_gen[num][0].size(); j++) {
+                if (new_gen[num][i][j])
                     cur++;
+            }
         }
-        result.emplace_back(std::make_pair(new_gen[num], last_gen[num] == new_gen[num] ? cur - FIELD*FIELD : cur));
+        result.emplace_back(std::make_pair(gen[num], !vec_changed[num] ? cur - FIELD*FIELD : cur));
     }
 
     return result;
@@ -112,7 +121,7 @@ void Crossing::GetCrossing(std::vector <space> &solution) {
     size_t first, second, pos;
     space new_sol;
 
-    while (solution.size() < GENSIZE) {
+    while (solution.size() < POPULATION_SIZE) {
         first = rand() % solution.size();
         do {
             second = rand() % solution.size();
@@ -132,8 +141,8 @@ void Mutation::GetMutation(std::vector<space> &solution) {
     float mut;
 
     for (auto &solution_solo : solution) {
-        for (size_t x = 0; x <= FIELD; x++)
-            for (size_t y = 0; y <= FIELD; y++) {
+        for (size_t x = 0; x < FIELD; x++)
+            for (size_t y = 0; y < FIELD; y++) {
                 mut = (rand() % 100) / (100 * 1.0);
                 if (mut > MUTATION_PROBABILITY)
                     solution_solo[x][y] = !solution_solo[x][y];

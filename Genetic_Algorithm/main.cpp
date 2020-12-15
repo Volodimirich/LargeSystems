@@ -1,9 +1,9 @@
 #include <iostream>
+#include "Genetic.h"
+#include "MainCycle.h"
 
 int main() {
-    int x = 1;
-    int y = 0;
-    std::cout << x << " " <<!x << std::endl;
-    std::cout << y << " " <<!y << std::endl;
+    MainCycle m;
+    auto a = m.Start();
     return 0;
 }
