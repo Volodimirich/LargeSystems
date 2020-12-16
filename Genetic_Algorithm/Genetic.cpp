@@ -1,8 +1,8 @@
 //
 // Created by voland on 14.12.2020.
 //
-//#define FIELD 10
-//#define POPULATION_SIZE 3
+//#define FIELD 50
+//#define POPULATION_SIZE 10
 //#define MUTATION_AMOUNT 100
 //#define MUTATION_PROBABILITY 0.6
 #include "Genetic.h"
@@ -15,10 +15,10 @@ size_t Estimation::NeighborReaction(space &gen, std::pair<size_t, size_t> pos){
     for (int i=-1; i<=1; i++)
         for (int j=-1; j<=1; j++) {
             pos_x = pos.first + i;
-            pos_y = pos.second + i;
+            pos_y = pos.second + j;
 
-            if (pos_x == 0 and pos_y == 0)
-                break;
+            if (i == 0 and j == 0)
+                continue;
 
             if (pos_x >= 0 and pos_y >= 0 and pos_x < FIELD and pos_y < FIELD) {
                 if (gen[pos_x][pos_y])
@@ -33,7 +33,7 @@ size_t Estimation::NeighborReaction(space &gen, std::pair<size_t, size_t> pos){
         return 2;
 }
 
-int Estimation::LifeStart(space gen, size_t step_amount, bool last) {
+int Estimation::LifeStart(space &gen, size_t step_amount, bool last) {
     space old_gen;
     bool changed = false;
     for (size_t itt=0; itt<step_amount; itt++) {

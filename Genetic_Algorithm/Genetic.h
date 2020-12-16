@@ -3,10 +3,11 @@
 //
 #include "iostream"
 #include "vector"
+#include "memory"
 
 #ifndef GENETIC_ALGORITHM_GENETIC_H
 #define GENETIC_ALGORITHM_GENETIC_H
-#define FIELD 10
+#define FIELD 50
 #define POPULATION_SIZE 16
 #define MUTATION_AMOUNT 100
 #define MUTATION_PROBABILITY 0.6
@@ -15,6 +16,7 @@ using space = std::vector <std::vector <int>>;
 
 class AbstEstimation {
 public:
+    virtual int LifeStart(space &gen, size_t step_amount, bool last = false) = 0;
     virtual  std::vector <std::pair<space,int>> GetEstimation(std::vector <space> &gen) = 0;
     AbstEstimation() = default;
     virtual ~AbstEstimation() = default;
@@ -46,9 +48,9 @@ public:
 class Estimation: public AbstEstimation
 {
 private:
-    int LifeStart(space gen, size_t step_amount, bool last = false);
     size_t NeighborReaction(space &gen, std::pair<size_t, size_t> pos);
 public:
+    int LifeStart(space &gen, size_t step_amount, bool last = false);
     std::vector <std::pair<space,int>> GetEstimation(std::vector <space> &gen);
     Estimation() = default;
     ~Estimation() = default;

@@ -4,14 +4,37 @@
 
 #include "MainCycle.h"
 #include "vector"
+#include <unistd.h>
 
+void MainCycle::Clear() {
+    printf("\033[2J");
+    printf("\033[%d;%dH", 0, 0);
+}
 
+void MainCycle::PrintResult(space best) {
+    for (size_t it = 0; it<101; it++) {
+        for (size_t i = 0; i < best.size(); i++) {
+            for (size_t j = 0; j < best[i].size(); j++) {
+                auto symb = best[i][j] == 1 ? "#" : ".";
+                std::cout << symb;
+            }
+            std::cout << std::endl;
+        }
+        estim->LifeStart(best, 1);
+        usleep(500000);
+        Clear();
+    }
+}
 
 
 
 MainCycle::MainCycle() {
     space gen;
     std::vector<int> line;
+    estim = std::make_unique<Estimation> ();
+    select = std::make_unique<Selection>();
+    cross = std::make_unique<Crossing>();
+    mutate = std::make_unique<Mutation>();
 
     for (size_t pop = 0; pop<POPULATION_SIZE; pop++){
         for (size_t i=0; i<FIELD; i++) {
@@ -27,16 +50,13 @@ MainCycle::MainCycle() {
 }
 
 std::vector<space> MainCycle::Start() {
-    Estimation estim;
-    Selection select;
-    Crossing cross;
-    Mutation mutate;
+
     std::pair <space, int> best = {{}, 0};
     int pos;
     size_t best_itt = 0;
     while (best_itt < 20) {
         pos = -1;
-        std::vector<std::pair<space, int>> population_estimition = estim.GetEstimation(population);
+        std::vector<std::pair<space, int>> population_estimition = estim->GetEstimation(population);
 
         for (size_t i = 0; i < population_estimition.size(); i++) {
             if (population_estimition[i].second > best.second) {
@@ -52,12 +72,13 @@ std::vector<space> MainCycle::Start() {
             best_itt++;
         }
 
-        std::vector<space> new_gen = select.GetSelect(population_estimition, 8, POPULATION_SIZE / 2);
-        cross.GetCrossing(new_gen);
-        mutate.GetMutation(new_gen);
+        std::vector<space> new_gen = select->GetSelect(population_estimition, 8, POPULATION_SIZE / 2);
+        cross->GetCrossing(new_gen);
+        mutate->GetMutation(new_gen);
         population = new_gen;
     }
-
+    std::cout << "BEST" << best.second << std::endl;
+    PrintResult(best.first);
     return population;
 }
 
