@@ -110,8 +110,8 @@ std::vector<space> Selection::GetSelect(std::vector <std::pair<space,int>> solut
                 best = solution[best].second > solution[player].second ? best : player;
             }
 
-            result.emplace_back(solution[best].first);
         }
+        result.emplace_back(solution[best].first);
     }
     return result;
 }
@@ -129,7 +129,7 @@ void Crossing::GetCrossing(std::vector <space> &solution) {
 
         pos = rand() % solution[first].size();
         std::copy(solution[first].begin(), solution[first].begin() + pos, std::back_inserter(new_sol));
-        std::copy(solution[second].begin() + pos, solution[first].end(), std::back_inserter(new_sol));
+        std::copy(solution[second].begin() + pos, solution[second].end(), std::back_inserter(new_sol));
 
         solution.emplace_back(new_sol);
         new_sol.clear();
