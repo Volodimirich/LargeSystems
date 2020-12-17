@@ -117,6 +117,6 @@ std::shared_ptr<TFunction> operator/(Smth a, std::shared_ptr<TFunction> func1) {
     throw std::logic_error("Bad argument to /");
 }
 
-double gradient_descent(std::shared_ptr<TFunction> func, size_t itt, double eps = 0.005, double coef = 0.01);
+double gradient_descent(std::shared_ptr<TFunction> func, size_t itt = 1000, double eps = 0.5, double coef = 0.1);
 
 #endif

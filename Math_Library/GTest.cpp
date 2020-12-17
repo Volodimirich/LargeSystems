@@ -428,7 +428,7 @@ TEST(GradientDescentTest, TestExpFunction) {
 
     auto p = fun_1 - fun_2;
     ASSERT_EQ("3^x - 3", p->ToString());
-    ASSERT_NEAR(1, gradient_descent(p, 1000), 0.0001);
+    ASSERT_NEAR(1, gradient_descent(p, 1000, 0.01, 0.001), 0.1);
 
 }
 

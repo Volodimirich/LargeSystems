@@ -7,8 +7,8 @@
 
 #ifndef GENETIC_ALGORITHM_GENETIC_H
 #define GENETIC_ALGORITHM_GENETIC_H
-#define FIELD 5
-#define POPULATION_SIZE 16
+#define FIELD 50
+#define POPULATION_SIZE 100
 #define MUTATION_AMOUNT 100
 
 using space = std::vector <std::vector <int>>;

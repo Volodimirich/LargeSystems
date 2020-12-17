@@ -107,6 +107,10 @@ void MainCycle::Start(float mut, int numb, int launch) {
     }
     std::cout << "BEST" << best.second << std::endl;
     PrintResult(best.first);
+    std::string filename = "series_" + std::to_string(exp_numb) + "_best_result_" + std::to_string(launch_numb) + ".txt";
+    std::ofstream file(filename.c_str());
+    file << best.second;
+    file.close();
 }
 
 
