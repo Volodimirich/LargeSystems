@@ -7,10 +7,9 @@
 
 #ifndef GENETIC_ALGORITHM_GENETIC_H
 #define GENETIC_ALGORITHM_GENETIC_H
-#define FIELD 50
+#define FIELD 5
 #define POPULATION_SIZE 16
 #define MUTATION_AMOUNT 100
-#define MUTATION_PROBABILITY 0.6
 
 using space = std::vector <std::vector <int>>;
 
@@ -39,7 +38,7 @@ public:
 
 class AbstMutation {
 public:
-    virtual void GetMutation(std::vector <space> &solution) = 0;
+    virtual void GetMutation(std::vector <space> &solution, float mut_probability) = 0;
     AbstMutation() = default;
     virtual ~AbstMutation() = default;
 };
@@ -72,7 +71,7 @@ public:
 
 class Mutation: public AbstMutation {
 public:
-    void GetMutation(std::vector <space> &solution);
+    void GetMutation(std::vector <space> &solution, float mut_probability);
     Mutation() = default;
     ~Mutation() = default;
 };

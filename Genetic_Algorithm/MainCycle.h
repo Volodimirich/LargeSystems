@@ -13,10 +13,15 @@ private:
     std::unique_ptr<AbstSelection> select;
     std::unique_ptr<AbstCrossing> cross;
     std::unique_ptr<AbstMutation> mutate;
+    float mut_probability;
+    int exp_numb;
+    int launch_numb;
+
 public:
     MainCycle();
-    std::vector<space> Start();
-    void PrintResult(space best);
+    void Start(float mut, int numb, int launch);
+    void WriteInFile(space &best, bool last);
+    void PrintResult(space &best);
     void Clear();
 };
 

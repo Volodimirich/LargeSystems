@@ -137,14 +137,14 @@ void Crossing::GetCrossing(std::vector <space> &solution) {
 
 }
 
-void Mutation::GetMutation(std::vector<space> &solution) {
+void Mutation::GetMutation(std::vector<space> &solution, float mut_probability) {
     float mut;
 
     for (auto &solution_solo : solution) {
         for (size_t x = 0; x < FIELD; x++)
             for (size_t y = 0; y < FIELD; y++) {
                 mut = (rand() % 100) / (100 * 1.0);
-                if (mut > MUTATION_PROBABILITY)
+                if (mut > mut_probability)
                     solution_solo[x][y] = !solution_solo[x][y];
             }
     }
