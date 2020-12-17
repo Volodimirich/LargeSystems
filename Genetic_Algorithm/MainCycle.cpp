@@ -15,6 +15,8 @@ void MainCycle::Clear() {
 
 void MainCycle::WriteInFile(space &best, bool last) {
 
+    std::cout<<exp_numb;
+    std::cout<<launch_numb << std::endl;
     std::string filename = !last ? "series_" + std::to_string(exp_numb) + "_run_" + std::to_string(launch_numb) + ".txt" :
         "series_" + std::to_string(exp_numb) + "_run_" + std::to_string(launch_numb) + "_sol_after100.txt";
     std::ofstream file(filename.c_str());
@@ -55,7 +57,7 @@ MainCycle::MainCycle() {
     select = std::make_unique<Selection>();
     cross = std::make_unique<Crossing>();
     mutate = std::make_unique<Mutation>();
-
+    srand(static_cast<unsigned int>(time(nullptr)));
     for (size_t pop = 0; pop<POPULATION_SIZE; pop++){
         for (size_t i=0; i<FIELD; i++) {
             for (size_t j = 0; j < FIELD; j++) {
